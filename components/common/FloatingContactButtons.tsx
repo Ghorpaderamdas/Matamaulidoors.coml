@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageSquare, Phone } from "lucide-react";
 
 export function FloatingContactButtons() {
   return (
@@ -14,16 +14,16 @@ export function FloatingContactButtons() {
         className="flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-[0_10px_30px_rgba(37,211,102,.35)] hover:shadow-[0_15px_40px_rgba(37,211,102,.45)] transition-all duration-300 hover:scale-110"
         aria-label="Contact us on WhatsApp"
       >
-        <MessageCircle size={32} fill="currentColor" strokeWidth={1.5} />
+        <MessageSquare size={28} fill="white" stroke="white" strokeWidth={2} />
       </Link>
 
       {/* Phone Button */}
       <Link
         href="tel:+919999999999"
-        className="flex items-center justify-center w-16 h-16 rounded-full bg-[#D4A574] text-white shadow-[0_10px_30px_rgba(212,165,116,.35)] hover:shadow-[0_15px_40px_rgba(212,165,116,.45)] transition-all duration-300 hover:scale-110"
+        className="flex items-center justify-center w-16 h-16 rounded-full bg-[#C9B08A] text-[#3B3B3B] shadow-[0_10px_30px_rgba(201,176,138,.35)] hover:shadow-[0_15px_40px_rgba(201,176,138,.45)] transition-all duration-300 hover:scale-110"
         aria-label="Call us"
       >
-        <Phone size={32} strokeWidth={1.5} />
+        <Phone size={28} strokeWidth={2.5} />
       </Link>
     </div>
   );
