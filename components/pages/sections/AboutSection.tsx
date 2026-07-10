@@ -756,11 +756,13 @@ export function AboutSection() {
               <strong className="font-semibold text-[#1B1B1B]">
                 Shri Ramesh Dhadawad
               </strong>
-              , Mata Mauli Industries is a family-owned workshop of skilled
-              craftsmen located near Maruti Mandir, Taked BK, Igatpuri.
-              For more than two decades, we have focused on one purpose—
-              creating elegant wooden doors that combine timeless aesthetics,
-              precision engineering, and lasting durability.
+              , Mata Mauli Industries is a family-run atelier of master
+              craftsmen based near Maruti Mandir, Taked BK, Igatpuri. For over
+              two decades we have quietly built a reputation for one thing —
+              <span className="italic">
+                {" "}
+                making the finest doors in Maharashtra.
+              </span>
             </p>
 
             <p
@@ -772,10 +774,10 @@ export function AboutSection() {
                 lg:text-[18px]
               "
             >
-              Every door begins with carefully seasoned timber and finishes
-              with meticulous hand craftsmanship. Premium hardware,
-              flawless joinery, and attention to every detail ensure each
-              entrance becomes a statement of luxury for generations.
+              Every Mata Mauli door is a study in restraint. Seasoned timber.
+              Precision joinery. Hand-rubbed finishes. Hardware chosen like
+              jewelry. We build doors that welcome you home for generations —
+              never dating, never disappointing.
             </p>
             {/* ============================================================ */}
             {/* Statistics */}
@@ -925,4 +927,4 @@ export function AboutSection() {
 
     </section>
   );
-}            
+}
