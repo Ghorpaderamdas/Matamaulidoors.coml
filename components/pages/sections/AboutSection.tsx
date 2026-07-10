@@ -604,10 +604,10 @@ export function AboutSection() {
 
                 </div>
 
-                <p className="mt-4 text-[15px] leading-7 text-[#666]">
-                  Trusted by
-                  <strong className="text-[#222]"> 1000+ </strong>
-                  homeowners across Maharashtra.
+                <p className="mt-4 text-[13px] leading-6 text-[#666]">
+                  Trusted by <strong className="text-[#222]">1000+</strong>
+                  <br />
+                  luxury homes across India.
                 </p>
               </motion.div>
               {/* ============================================================ */}
@@ -637,7 +637,7 @@ export function AboutSection() {
                 <h3
                   className="
                     font-serif
-                    text-[60px]
+                    text-[52px]
                     font-light
                     leading-none
                     text-[#C89B3C]
@@ -649,7 +649,7 @@ export function AboutSection() {
                 <p
                   className="
                     mt-4
-                    text-[12px]
+                    text-[11px]
                     uppercase
                     tracking-[0.32em]
                     leading-6
