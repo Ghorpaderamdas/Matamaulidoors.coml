@@ -7,6 +7,7 @@ import { AboutSection } from '@/components/pages/sections/AboutSection';
 import { CollectionSection } from '@/components/pages/sections/CollectionSection';
 import { WhySection } from '@/components/pages/sections/WhySection';
 import { GallerySection } from '@/components/pages/sections/GallerySection';
+import { ReviewsSection } from '@/components/pages/sections/ReviewsSection';
 import { ContactSection } from '@/components/pages/sections/ContactSection';
 import { FloatingContactButtons } from '@/components/common/FloatingContactButtons';
 
@@ -19,6 +20,7 @@ export function LandingPage() {
       <CollectionSection />
       <WhySection />
       <GallerySection />
+      <ReviewsSection />
       <ContactSection />
       <Footer />
       <FloatingContactButtons />
