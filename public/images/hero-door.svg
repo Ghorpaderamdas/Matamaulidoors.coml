@@ -1,0 +1,17 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#191919"/>
+  <rect y="860" width="1600" height="340" fill="#1F221F"/>
+  <path d="M420 880H1180V1040H420V880Z" fill="#3D2714"/>
+  <path d="M460 860H1140V980H460V860Z" fill="#5C351A"/>
+  <path d="M520 820H1080V900H520V820Z" fill="#845225"/>
+  <path d="M500 780H1100V840H500V780Z" fill="#A56C2F"/>
+  <rect x="620" y="250" width="360" height="560" rx="28" fill="#5B3320"/>
+  <rect x="640" y="270" width="320" height="520" rx="24" fill="#7B4626"/>
+  <rect x="670" y="320" width="260" height="420" rx="18" fill="#AF7A44"/>
+  <rect x="696" y="336" width="208" height="388" rx="12" fill="#F2D3A0"/>
+  <rect x="720" y="360" width="160" height="320" rx="10" fill="#C68D4A"/>
+  <rect x="760" y="620" width="80" height="120" rx="12" fill="#111111"/>
+  <rect x="760" y="276" width="80" height="46" rx="12" fill="#111111"/>
+  <path d="M760 202C731 202 708 225 708 254V290H812V254C812 225 789 202 760 202Z" fill="#111111"/>
+  <path d="M780 472C809 472 832 449 832 420V404H728V420C728 449 751 472 780 472Z" fill="#111111"/>
+</svg>
