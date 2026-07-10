@@ -861,12 +861,13 @@ export function AboutSection() {
                   px-10
                   text-base
                   font-semibold
-                  text-white
+                  text-[#1B1B1B]
                   shadow-[0_18px_45px_rgba(200,155,60,.28)]
                   transition-all
                   duration-300
                   hover:-translate-y-1
                   hover:bg-[#B8892D]
+                  hover:text-white
                   hover:shadow-[0_24px_55px_rgba(200,155,60,.38)]
                 "
               >
