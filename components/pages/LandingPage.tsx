@@ -7,7 +7,10 @@ import { AboutSection } from '@/components/pages/sections/AboutSection';
 import { CollectionSection } from '@/components/pages/sections/CollectionSection';
 import { WhySection } from '@/components/pages/sections/WhySection';
 import { GallerySection } from '@/components/pages/sections/GallerySection';
+import { ReviewsSection } from '@/components/pages/sections/ReviewsSection';
+import { FAQSection } from '@/components/pages/sections/FAQSection';
 import { ContactSection } from '@/components/pages/sections/ContactSection';
+import { FloatingContactButtons } from '@/components/common/FloatingContactButtons';
 
 export function LandingPage() {
   return (
@@ -18,8 +21,11 @@ export function LandingPage() {
       <CollectionSection />
       <WhySection />
       <GallerySection />
+      <ReviewsSection />
+      <FAQSection />
       <ContactSection />
       <Footer />
+      <FloatingContactButtons />
     </main>
   );
 }

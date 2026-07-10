@@ -604,10 +604,10 @@ export function AboutSection() {
 
                 </div>
 
-                <p className="mt-4 text-[15px] leading-7 text-[#666]">
-                  Trusted by
-                  <strong className="text-[#222]"> 1000+ </strong>
-                  homeowners across Maharashtra.
+                <p className="mt-4 text-[13px] leading-6 text-[#666]">
+                  Trusted by <strong className="text-[#222]">1000+</strong>
+                  <br />
+                  luxury homes across India.
                 </p>
               </motion.div>
               {/* ============================================================ */}
@@ -637,7 +637,7 @@ export function AboutSection() {
                 <h3
                   className="
                     font-serif
-                    text-[60px]
+                    text-[52px]
                     font-light
                     leading-none
                     text-[#C89B3C]
@@ -649,7 +649,7 @@ export function AboutSection() {
                 <p
                   className="
                     mt-4
-                    text-[12px]
+                    text-[11px]
                     uppercase
                     tracking-[0.32em]
                     leading-6
@@ -756,11 +756,13 @@ export function AboutSection() {
               <strong className="font-semibold text-[#1B1B1B]">
                 Shri Ramesh Dhadawad
               </strong>
-              , Mata Mauli Industries is a family-owned workshop of skilled
-              craftsmen located near Maruti Mandir, Taked BK, Igatpuri.
-              For more than two decades, we have focused on one purpose—
-              creating elegant wooden doors that combine timeless aesthetics,
-              precision engineering, and lasting durability.
+              , Mata Mauli Industries is a family-run atelier of master
+              craftsmen based near Maruti Mandir, Taked BK, Igatpuri. For over
+              two decades we have quietly built a reputation for one thing —
+              <span className="italic">
+                {" "}
+                making the finest doors in Maharashtra.
+              </span>
             </p>
 
             <p
@@ -772,10 +774,10 @@ export function AboutSection() {
                 lg:text-[18px]
               "
             >
-              Every door begins with carefully seasoned timber and finishes
-              with meticulous hand craftsmanship. Premium hardware,
-              flawless joinery, and attention to every detail ensure each
-              entrance becomes a statement of luxury for generations.
+              Every Mata Mauli door is a study in restraint. Seasoned timber.
+              Precision joinery. Hand-rubbed finishes. Hardware chosen like
+              jewelry. We build doors that welcome you home for generations —
+              never dating, never disappointing.
             </p>
             {/* ============================================================ */}
             {/* Statistics */}
@@ -859,12 +861,13 @@ export function AboutSection() {
                   px-10
                   text-base
                   font-semibold
-                  text-white
+                  text-[#1B1B1B]
                   shadow-[0_18px_45px_rgba(200,155,60,.28)]
                   transition-all
                   duration-300
                   hover:-translate-y-1
                   hover:bg-[#B8892D]
+                  hover:text-white
                   hover:shadow-[0_24px_55px_rgba(200,155,60,.38)]
                 "
               >
@@ -925,4 +928,4 @@ export function AboutSection() {
 
     </section>
   );
-}            
+}
