@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "Home", href: "/#home" },
@@ -18,9 +18,19 @@ const navItems = [
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="luxury-nav">
+    <nav className={`luxury-nav ${isScrolled ? "luxury-nav--scrolled" : ""}`}>
       <div className="luxury-nav__inner">
         <Link href="/#home" className="luxury-nav__brand">
           <span className="luxury-nav__logo">
