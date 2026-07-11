@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
 
 export function FloatingContactButtons() {
   return (
@@ -26,7 +25,14 @@ export function FloatingContactButtons() {
     active:scale-95
   "
 >
-  <FaWhatsapp className="text-[34px] transition-transform duration-300 group-hover:rotate-12" />
+  <svg
+    className="h-[34px] w-[34px] transition-transform duration-300 group-hover:rotate-12"
+    viewBox="0 0 32 32"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M16 3a12.8 12.8 0 0 0-11 19.37L3.5 28.5l6.3-1.5A12.8 12.8 0 1 0 16 3Zm0 23.4a10.56 10.56 0 0 1-5.38-1.47l-.39-.23-3.74.89.9-3.64-.26-.42A10.61 10.61 0 1 1 16 26.4Zm5.82-7.94c-.32-.16-1.9-.94-2.2-1.05-.29-.1-.5-.16-.71.16-.21.32-.81 1.05-1 1.26-.18.21-.37.24-.69.08-1.87-.93-3.1-1.66-4.34-3.77-.33-.57.33-.53.95-1.76.1-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.62-.53-.54-.71-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.69s1.15 3.12 1.31 3.34c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.67.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z" />
+  </svg>
 </Link>
 
       {/* Phone Button */}

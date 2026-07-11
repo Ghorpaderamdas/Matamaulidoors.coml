@@ -161,7 +161,7 @@ export function ReviewsSection() {
               >
                 {/* Quote Mark */}
                 <div className="text-5xl text-[#C89B3C] font-light leading-none mb-4">
-                  "
+                  &quot;
                 </div>
 
                 {/* Stars */}
