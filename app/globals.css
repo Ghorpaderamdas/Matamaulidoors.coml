@@ -262,17 +262,17 @@ color:white;
 .luxury-nav__brand-subtitle {
   display: block;
   margin-top: 9px;
-  font-family: var(--font-inter), Arial, sans-serif;
+  font-family: inherit;
   font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.43em;
-  text-transform: uppercase;
-  color: #e7c77a;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--gold);
 }
 
 .luxury-nav--scrolled .luxury-nav__brand-subtitle {
-  font-size: 11px;
-  margin-top: 4px;
+  font-size: 15px;
+  margin-top: 9px;
 }
 
 .luxury-nav__links {
@@ -437,3 +437,7 @@ color:white;
     grid-template-columns: 1fr;
   }
 }
+
+
+
+

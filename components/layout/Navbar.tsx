@@ -45,7 +45,7 @@ export function Navbar() {
           </span>
           <span className="luxury-nav__brand-copy">
             <span className="luxury-nav__brand-name">MATA MAULI</span>
-            <span className="luxury-nav__brand-subtitle">Industries</span>
+            <span className="luxury-nav__brand-subtitle">Premium Doors . Timeless Quality</span>
           </span>
         </Link>
 
