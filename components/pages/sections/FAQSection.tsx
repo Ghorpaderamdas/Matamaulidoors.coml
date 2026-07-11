@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -155,14 +156,14 @@ export function FAQSection() {
           className="mt-16 text-center"
         >
           <p className="text-[16px] text-[#5F5F5F] mb-6">
-            Didn't find what you're looking for?
+            Didn&apos;t find what you&apos;re looking for?
           </p>
-          <a
+          <Link
             href="/#contact"
             className="inline-flex items-center justify-center h-16 rounded-full bg-[#C89B3C] px-10 text-base font-semibold text-white shadow-[0_18px_45px_rgba(200,155,60,.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#B8892D] hover:shadow-[0_24px_55px_rgba(200,155,60,.38)]"
           >
             Contact Us
-          </a>
+          </Link>
         </motion.div>
       </Container>
 
