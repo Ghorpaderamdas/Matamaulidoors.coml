@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,48 +21,56 @@ const collections = [
     label: 'SIGNATURE CRAFT',
     desc: 'Sculptured statements - carved, beveled and finished by master craftsmen.',
     img: '/images/door-01.svg',
+    slug: 'designer',
   },
   {
     name: 'Wooden Doors',
     label: 'NATURAL ELEGANCE',
     desc: 'Solid oak, teak and sheesham engineered to last generations.',
     img: '/images/gallery-01.svg',
+    slug: 'wooden',
   },
   {
     name: 'PVC Doors',
     label: 'MODERN & DURABLE',
     desc: 'Contemporary design with weather-resistant, low-maintenance finish.',
     img: '/images/gallery-02.svg',
+    slug: 'pvc',
   },
   {
     name: 'Laminate Doors',
     label: 'REFINED FINISH',
     desc: 'High-pressure laminates with luxury textures and finishes.',
     img: '/images/gallery-03.svg',
+    slug: 'laminate',
   },
   {
     name: 'Flush Doors',
     label: 'CLEAN MINIMALISM',
     desc: 'Sleek, frameless design for contemporary and minimalist interiors.',
     img: '/images/gallery-04.svg',
+    slug: 'flush',
   },
   {
     name: 'Interior Doors',
     label: 'EVERYDAY LUXURY',
     desc: 'Room dividers designed for grace, privacy and acoustic control.',
     img: '/images/door-02.svg',
+    slug: 'interior',
   },
   {
     name: 'Main Entrance Doors',
     label: 'GRAND STATEMENT',
     desc: 'Statement entries with bold detailing and premium hardware.',
     img: '/images/door-03.svg',
+    slug: 'main-entrance',
   },
   {
     name: 'Custom Doors',
     label: 'MADE TO ORDER',
     desc: 'Bespoke dimensions, motifs, and finishes tailored to your design.',
     img: '/images/gallery-01.svg',
+    slug: 'custom',
   },
 ];
 
@@ -127,7 +135,7 @@ export function CollectionSection() {
                 </p>
 
                 <Link
-                  href="/#collection"
+                  href={`/doors/${collection.slug}`}
                   className="mt-6 inline-flex min-h-11 items-center text-sm font-medium text-[#C89B3C] transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#C89B3C]/30 group/link"
                 >
                   View Details

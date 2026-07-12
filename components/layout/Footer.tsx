@@ -1,4 +1,4 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 
