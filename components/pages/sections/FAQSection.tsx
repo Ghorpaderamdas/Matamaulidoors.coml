@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -62,7 +62,7 @@ const faqs = [
     id: 8,
     question: "Can you match existing doors in my home?",
     answer:
-      "Absolutely. We can replicate existing door designs or create new doors that complement your current décor. Bring photos or measurements of your existing doors, and our design team will match the style, finish, and hardware.",
+      "Absolutely. We can replicate existing door designs or create new doors that complement your current decor. Bring photos or measurements of your existing doors, and our design team will match the style, finish, and hardware.",
   },
 ];
 
@@ -72,29 +72,27 @@ export function FAQSection() {
   return (
     <section
       id="faq"
-      className="relative overflow-hidden bg-[#F9F7F3] py-24 md:py-32 xl:py-40"
+      className="relative overflow-hidden bg-[#F9F7F3] py-16 md:py-24 xl:py-32"
     >
       <Container className="relative z-10 max-w-[1540px]">
-        {/* Header */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mx-auto max-w-2xl text-center mb-20"
+          className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
-          <span className="inline-block text-[11px] font-medium uppercase tracking-[0.45em] text-[#C89B3C]">
+          <span className="inline-block text-xs font-medium uppercase tracking-[0.28em] text-[#C89B3C]">
             FREQUENTLY ASKED
           </span>
 
-          <h2 className="mt-6 font-serif text-[42px] leading-[1.1] tracking-[-0.03em] text-[#1B1B1B] md:text-[58px] xl:text-[72px]">
+          <h2 className="mt-5 font-serif text-3xl leading-tight text-[#1B1B1B] md:mt-6 md:text-4xl lg:text-5xl">
             Everything, answered.
           </h2>
 
-          <div className="mt-10 h-px w-24 mx-auto bg-[#D7BE8E]" />
+          <div className="mx-auto mt-8 h-px w-24 bg-[#D7BE8E] md:mt-10" />
         </motion.div>
 
-        {/* FAQ Items */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -102,72 +100,76 @@ export function FAQSection() {
           viewport={{ once: true }}
           className="mx-auto max-w-3xl space-y-4"
         >
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={faq.id}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="border border-[#E8DED0] rounded-2xl overflow-hidden transition-all duration-300"
-            >
-              <button
-                onClick={() =>
-                  setExpandedId(expandedId === faq.id ? null : faq.id)
-                }
-                className="w-full flex items-center justify-between px-8 py-6 hover:bg-[#F3EEE5] transition-colors duration-300 group"
-              >
-                <h3 className="text-left font-serif text-[18px] font-light leading-tight text-[#1B1B1B] group-hover:text-[#C89B3C] transition-colors duration-300">
-                  {faq.question}
-                </h3>
-                <ChevronDown
-                  size={24}
-                  className={`flex-shrink-0 ml-6 text-[#C89B3C] transition-transform duration-300 ${
-                    expandedId === faq.id ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+          {faqs.map((faq, index) => {
+            const isExpanded = expandedId === faq.id;
+            const answerId = `faq-answer-${faq.id}`;
 
-              {expandedId === faq.id && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-[#FCFBF8]"
+            return (
+              <motion.div
+                key={faq.id}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="overflow-hidden rounded-2xl border border-[#E8DED0] transition-all duration-300"
+              >
+                <button
+                  type="button"
+                  onClick={() => setExpandedId(isExpanded ? null : faq.id)}
+                  className="group flex min-h-[72px] w-full items-center justify-between px-5 py-5 text-left transition-colors duration-300 hover:bg-[#F3EEE5] sm:px-8 sm:py-6"
+                  aria-expanded={isExpanded}
+                  aria-controls={answerId}
                 >
-                  <p className="px-8 py-6 text-[15px] leading-[1.8] text-[#5F5F5F]">
-                    {faq.answer}
-                  </p>
-                </motion.div>
-              )}
-            </motion.div>
-          ))}
+                  <span className="font-serif text-xl font-light leading-tight text-[#1B1B1B] transition-colors duration-300 group-hover:text-[#C89B3C] md:text-2xl">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    size={24}
+                    className={`ml-4 flex-shrink-0 text-[#C89B3C] transition-transform duration-300 sm:ml-6 ${isExpanded ? "rotate-180" : ""}`}
+                    aria-hidden="true"
+                  />
+                </button>
+
+                {isExpanded ? (
+                  <motion.div
+                    id={answerId}
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-[#FCFBF8]"
+                  >
+                    <p className="px-5 py-5 text-base leading-8 text-[#5F5F5F] sm:px-8 sm:py-6">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                ) : null}
+              </motion.div>
+            );
+          })}
         </motion.div>
 
-        {/* CTA */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-16 text-center"
+          className="mt-12 text-center md:mt-16"
         >
-          <p className="text-[16px] text-[#5F5F5F] mb-6">
+          <p className="mb-6 text-base text-[#5F5F5F] md:text-lg">
             Didn&apos;t find what you&apos;re looking for?
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center justify-center h-16 rounded-full bg-[#C89B3C] px-10 text-base font-semibold text-white shadow-[0_18px_45px_rgba(200,155,60,.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#B8892D] hover:shadow-[0_24px_55px_rgba(200,155,60,.38)]"
+            className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-[#C89B3C] px-10 text-base font-semibold text-black shadow-[0_18px_45px_rgba(200,155,60,.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#B8892D] hover:shadow-[0_24px_55px_rgba(200,155,60,.38)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#C89B3C]/30 sm:w-auto md:min-h-16"
           >
             Contact Us
           </Link>
         </motion.div>
       </Container>
 
-      {/* Background Decorations */}
       <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#C89B3C]/5 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#C89B3C]/5 blur-3xl" />
     </section>

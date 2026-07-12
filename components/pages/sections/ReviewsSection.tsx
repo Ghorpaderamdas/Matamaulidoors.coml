@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { Star, MessageSquare, Play } from "lucide-react";
+import { MessageSquare, Play, Star } from "lucide-react";
 import { Container } from "@/components/common/Container";
 
 const fadeUp: Variants = {
@@ -17,7 +18,7 @@ const fadeUp: Variants = {
 const textReviews = [
   {
     id: 1,
-    text: "The entrance door Mata Mauli crafted for our villas is nothing short of art. The finish, the weight, the sound when it closes — pure luxury.",
+    text: "The entrance door Mata Mauli crafted for our villas is nothing short of art. The finish, the weight, the sound when it closes - pure luxury.",
     author: "Aditya Kulkarni",
     location: "PUNE",
     rating: 5,
@@ -38,7 +39,7 @@ const textReviews = [
   },
   {
     id: 4,
-    text: "True craftsmanship. Beautiful designer door with brass inlay — better than anything I saw in showrooms vs the price.",
+    text: "True craftsmanship. Beautiful designer door with brass inlay - better than anything I saw in showrooms vs the price.",
     author: "Kavita Joshi",
     location: "AHMEDABAD",
     rating: 5,
@@ -51,7 +52,6 @@ const videoReviews = [
     title: "Premium Wooden Door Installation",
     author: "Priya Sharma",
     location: "BANGALORE",
-    videoId: "dQw4w9WgXcQ",
     thumbnail: "/images/door-01.svg",
   },
   {
@@ -59,7 +59,6 @@ const videoReviews = [
     title: "Designer Door Craftsmanship",
     author: "Vikram Reddy",
     location: "HYDERABAD",
-    videoId: "dQw4w9WgXcQ",
     thumbnail: "/images/door-02.svg",
   },
   {
@@ -67,7 +66,6 @@ const videoReviews = [
     title: "Interior Doors Transformation",
     author: "Anjali Verma",
     location: "DELHI",
-    videoId: "dQw4w9WgXcQ",
     thumbnail: "/images/door-03.svg",
   },
   {
@@ -75,7 +73,6 @@ const videoReviews = [
     title: "Custom Door Design Showcase",
     author: "Rajesh Kumar",
     location: "KOLKATA",
-    videoId: "dQw4w9WgXcQ",
     thumbnail: "/images/gallery-01.svg",
   },
 ];
@@ -86,68 +83,73 @@ export function ReviewsSection() {
   return (
     <section
       id="reviews"
-      className="relative overflow-hidden bg-[#F9F7F3] py-24 md:py-32 xl:py-40"
+      className="relative overflow-hidden bg-[#F9F7F3] py-16 md:py-24 xl:py-32"
     >
       <Container className="relative z-10 max-w-[1540px]">
-        {/* Header */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mx-auto max-w-2xl text-center mb-16"
+          className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
         >
-          <span className="inline-block text-[11px] font-medium uppercase tracking-[0.45em] text-[#C89B3C]">
+          <span className="inline-block text-xs font-medium uppercase tracking-[0.28em] text-[#C89B3C]">
             CLIENT VOICES
           </span>
 
-          <h2 className="mt-6 font-serif text-[42px] leading-[1.1] tracking-[-0.03em] text-[#1B1B1B] md:text-[58px] xl:text-[72px]">
+          <h2 className="mt-5 font-serif text-3xl leading-tight text-[#1B1B1B] md:mt-6 md:text-4xl lg:text-5xl">
             Loved by discerning homes.
           </h2>
 
-          <div className="mt-10 h-px w-24 mx-auto bg-[#D7BE8E]" />
+          <div className="mx-auto mt-8 h-px w-24 bg-[#D7BE8E] md:mt-10" />
         </motion.div>
 
-        {/* Toggle Buttons */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mb-16 flex items-center justify-center gap-4"
+          className="mb-12 grid gap-3 sm:flex sm:items-center sm:justify-center sm:gap-4 md:mb-16"
+          role="tablist"
+          aria-label="Review type"
         >
           <button
+            type="button"
             onClick={() => setActiveTab("text")}
-            className={`group inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold transition-all duration-300 ${
+            className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-base font-semibold transition-all duration-300 sm:px-8 ${
               activeTab === "text"
                 ? "bg-[#C89B3C] text-white shadow-[0_10px_30px_rgba(200,155,60,.3)]"
                 : "border border-[#D7BE8E] text-[#1B1B1B] hover:border-[#C89B3C]"
             }`}
+            role="tab"
+            aria-selected={activeTab === "text"}
           >
-            <MessageSquare size={18} />
+            <MessageSquare size={18} aria-hidden="true" />
             Text Testimonial
           </button>
           <button
+            type="button"
             onClick={() => setActiveTab("video")}
-            className={`group inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold transition-all duration-300 ${
+            className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-base font-semibold transition-all duration-300 sm:px-8 ${
               activeTab === "video"
                 ? "bg-[#C89B3C] text-white shadow-[0_10px_30px_rgba(200,155,60,.3)]"
                 : "border border-[#D7BE8E] text-[#1B1B1B] hover:border-[#C89B3C]"
             }`}
+            role="tab"
+            aria-selected={activeTab === "video"}
           >
-            <Play size={18} />
+            <Play size={18} aria-hidden="true" />
             Watch Video
           </button>
         </motion.div>
 
-        {/* Text Reviews */}
-        {activeTab === "text" && (
+        {activeTab === "text" ? (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="grid gap-8 md:grid-cols-2 mb-20"
+            className="mb-16 grid gap-6 md:grid-cols-2 md:gap-8"
           >
             {textReviews.map((review, index) => (
               <motion.div
@@ -157,52 +159,40 @@ export function ReviewsSection() {
                 whileInView="show"
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="rounded-2xl border border-[#E8DED0] bg-white/70 backdrop-blur-sm p-8 shadow-sm hover:shadow-xl transition-shadow duration-300"
+                className="rounded-2xl border border-[#E8DED0] bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-xl md:p-8"
               >
-                {/* Quote Mark */}
-                <div className="text-5xl text-[#C89B3C] font-light leading-none mb-4">
+                <div className="mb-4 text-5xl font-light leading-none text-[#C89B3C]" aria-hidden="true">
                   &quot;
                 </div>
 
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
+                <div className="mb-4 flex gap-1" aria-label={`${review.rating} star review`}>
                   {Array.from({ length: review.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      fill="#C89B3C"
-                      className="text-[#C89B3C]"
-                    />
+                    <Star key={i} size={16} fill="#C89B3C" className="text-[#C89B3C]" aria-hidden="true" />
                   ))}
                 </div>
 
-                {/* Review Text */}
-                <p className="text-[15px] leading-[1.8] text-[#5F5F5F] mb-8">
+                <p className="mb-8 text-base leading-8 text-[#5F5F5F]">
                   {review.text}
                 </p>
 
-                {/* Author */}
                 <div>
-                  <h4 className="font-semibold text-[#1B1B1B]">
+                  <h4 className="text-base font-semibold text-[#1B1B1B] md:text-lg">
                     {review.author}
                   </h4>
-                  <p className="text-[12px] uppercase tracking-[0.32em] text-[#999] mt-1">
+                  <p className="mt-1 text-xs uppercase tracking-[0.28em] text-[#999]">
                     {review.location}
                   </p>
                 </div>
               </motion.div>
             ))}
           </motion.div>
-        )}
-
-        {/* Video Reviews */}
-        {activeTab === "video" && (
+        ) : (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-20"
+            className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8"
           >
             {videoReviews.map((video, index) => (
               <motion.div
@@ -212,28 +202,32 @@ export function ReviewsSection() {
                 whileInView="show"
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group rounded-2xl overflow-hidden"
+                className="group overflow-hidden rounded-2xl"
               >
-                <div className="relative aspect-[9/12] rounded-2xl overflow-hidden bg-black">
-                  {/* Thumbnail */}
+                <div className="relative aspect-[9/12] overflow-hidden rounded-2xl bg-black">
+                  <Image
+                    src={video.thumbnail}
+                    alt={`${video.title} testimonial thumbnail`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-                  {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#C89B3C] group-hover:scale-110 transition-transform duration-300">
-                      <Play size={24} className="text-white fill-white ml-1" />
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#C89B3C] transition-transform duration-300 group-hover:scale-110">
+                      <Play size={24} className="ml-1 fill-white text-white" aria-hidden="true" />
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                    <h4 className="font-serif text-[18px] font-light leading-tight mb-2">
+                    <h4 className="mb-2 font-serif text-xl font-light leading-tight md:text-2xl">
                       {video.title}
                     </h4>
-                    <p className="text-[13px] leading-relaxed text-gray-300 mb-3">
+                    <p className="mb-3 text-sm leading-relaxed text-gray-300">
                       {video.author}
                     </p>
-                    <p className="text-[11px] uppercase tracking-[0.32em] text-[#C89B3C]">
+                    <p className="text-xs uppercase tracking-[0.28em] text-[#C89B3C]">
                       {video.location}
                     </p>
                   </div>
@@ -243,49 +237,47 @@ export function ReviewsSection() {
           </motion.div>
         )}
 
-        {/* Google Review Section */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-24 rounded-3xl border border-[#E8DED0] bg-white/70 backdrop-blur-sm p-12 md:p-16 shadow-sm"
+          className="mt-16 rounded-[24px] border border-[#E8DED0] bg-white/70 p-6 shadow-sm backdrop-blur-sm md:mt-20 md:p-10 lg:p-12"
         >
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
+          <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-12">
             <div>
-              <h3 className="font-serif text-[42px] leading-[1.1] text-[#1B1B1B]">
+              <h3 className="font-serif text-3xl leading-tight text-[#1B1B1B] md:text-4xl lg:text-5xl">
                 Share Your Experience
               </h3>
 
-              <p className="mt-6 text-[16px] leading-[1.8] text-[#5F5F5F]">
+              <p className="mt-5 text-base leading-8 text-[#5F5F5F] md:mt-6 md:text-lg">
                 Your feedback helps us continue crafting doors that define luxury. Scan the QR code or visit our Google Business page to leave a review.
               </p>
 
-              <div className="mt-8 flex flex-col gap-4">
+              <div className="mt-8 space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#C89B3C]/10 flex-shrink-0 mt-0.5">
-                    <Star size={18} className="text-[#C89B3C]" fill="#C89B3C" />
+                  <div className="mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/10">
+                    <Star size={18} className="text-[#C89B3C]" fill="#C89B3C" aria-hidden="true" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#1B1B1B]">
+                    <h4 className="text-base font-semibold text-[#1B1B1B] md:text-lg">
                       Rate Your Door
                     </h4>
-                    <p className="text-[14px] text-[#5F5F5F] mt-1">
+                    <p className="mt-1 text-sm leading-6 text-[#5F5F5F] md:text-base">
                       Share how satisfied you are with your Mata Mauli door
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#C89B3C]/10 flex-shrink-0 mt-0.5">
-                    <MessageSquare size={18} className="text-[#C89B3C]" />
+                  <div className="mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/10">
+                    <MessageSquare size={18} className="text-[#C89B3C]" aria-hidden="true" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#1B1B1B]">
+                    <h4 className="text-base font-semibold text-[#1B1B1B] md:text-lg">
                       Write a Review
                     </h4>
-                    <p className="text-[14px] text-[#5F5F5F] mt-1">
+                    <p className="mt-1 text-sm leading-6 text-[#5F5F5F] md:text-base">
                       Tell others about your experience with our craftsmanship
                     </p>
                   </div>
@@ -293,25 +285,24 @@ export function ReviewsSection() {
               </div>
             </div>
 
-            {/* Right - QR Code */}
             <div className="flex justify-center">
-              <div className="rounded-2xl border-2 border-[#E8DED0] p-8 bg-white">
-                {/* Placeholder QR Code - Replace with actual QR */}
-                <div className="w-64 h-64 bg-gradient-to-br from-[#F9F7F3] to-[#E8DED0] rounded-xl flex items-center justify-center">
+              <div className="w-full max-w-[320px] rounded-2xl border-2 border-[#E8DED0] bg-white p-6 md:p-8">
+                <div className="aspect-square w-full rounded-xl bg-gradient-to-br from-[#F9F7F3] to-[#E8DED0] flex items-center justify-center">
                   <div className="text-center">
                     <svg
-                      className="w-32 h-32 mx-auto mb-3 text-[#C89B3C]/30"
+                      className="mx-auto mb-3 h-24 w-24 text-[#C89B3C]/30 md:h-32 md:w-32"
                       fill="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <path d="M3 11h8V3H3v8zm10 0h8V3h-8v8zM3 21h8v-8H3v8zm10 0h8v-8h-8v8z" />
                     </svg>
-                    <p className="text-[12px] text-[#999] font-semibold">
+                    <p className="text-xs font-semibold text-[#999]">
                       Google Reviews QR
                     </p>
                   </div>
                 </div>
-                <p className="text-center text-[12px] text-[#999] mt-4">
+                <p className="mt-4 text-center text-xs text-[#999]">
                   Scan to leave a review on Google
                 </p>
               </div>
@@ -320,7 +311,6 @@ export function ReviewsSection() {
         </motion.div>
       </Container>
 
-      {/* Background Decorations */}
       <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#C89B3C]/5 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#C89B3C]/5 blur-3xl" />
     </section>
