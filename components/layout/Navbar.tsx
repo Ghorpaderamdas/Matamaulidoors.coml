@@ -50,9 +50,9 @@ function useNavbarVisibility(isMenuOpen: boolean): NavbarScrollState {
     const updateNavbar = () => {
       const currentScrollY = Math.max(window.scrollY, 0);
       const delta = currentScrollY - lastScrollY.current;
-      const nextScrolled = currentScrollY > 32;
+      const nextScrolled = currentScrollY >= 20;
       const nextHidden = !isMenuOpen && currentScrollY > 140 && delta > 8;
-      const shouldReveal = currentScrollY < 32 || delta < -6 || isMenuOpen;
+      const shouldReveal = currentScrollY < 20 || delta < -6 || isMenuOpen;
       const resolvedHidden = shouldReveal ? false : nextHidden || stateRef.current.isHidden;
 
       if (
@@ -290,3 +290,4 @@ export function Navbar() {
     </motion.nav>
   );
 }
+
