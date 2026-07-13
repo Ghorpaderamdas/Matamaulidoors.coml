@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import { motion, Variants } from 'framer-motion';
+import Image from 'next/image';
 import { Award, Clock, Gem, Lightbulb, Lock, Shield, Sparkles, Wrench } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 
@@ -75,19 +76,36 @@ export function WhySection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mx-auto mb-12 max-w-3xl text-center md:mb-16"
+          className="mx-auto mb-10 max-w-5xl text-center md:mb-14"
         >
           <span className="inline-block text-xs font-medium uppercase tracking-[0.28em] text-[#C89B3C]">
             WHY CHOOSE MATA MAULI
           </span>
 
-          <h2 className="mt-5 font-serif text-3xl leading-tight text-white md:mt-6 md:text-4xl lg:text-5xl">
-            Uncompromising in every detail.
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-white md:mt-6 md:text-5xl lg:text-6xl">
+            Science Inside Simple Outside
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-300 md:mt-6 md:text-lg">
             Eight commitments we make on every door - no exceptions, no shortcuts.
           </p>
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mx-auto mb-12 w-full max-w-[1280px] md:mb-16"
+        >
+          <Image
+            src="/images/whyus.png"
+            alt="Door construction details showing the science inside and simple outside finish"
+            width={1800}
+            height={841}
+            sizes="(max-width: 768px) 100vw, 1280px"
+            className="h-auto w-full object-contain"
+          />
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -125,3 +143,4 @@ export function WhySection() {
     </section>
   );
 }
+
