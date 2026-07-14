@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -8,10 +8,10 @@ import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 
 const products = [
-  { name: 'Designer Doors', desc: 'Statement entryways with bespoke detailing and premium finishes.', img: '/images/door-01.svg' },
-  { name: 'Wooden Doors', desc: 'Solid wood craftsmanship with heirloom-grade durability.', img: '/images/wood-door-01.svg' },
-  { name: 'PVC Doors', desc: 'Low-maintenance, elegant, and ideal for modern interiors.', img: '/images/door-02.svg' },
-  { name: 'Custom Doors', desc: 'Tailor-made dimensions, motifs, and hardware finishes.', img: '/images/door-03.svg' },
+  { name: 'Designer Doors', desc: 'Statement entryways with bespoke detailing and premium finishes.', img: '/images/doors/designer/door-01.svg' },
+  { name: 'Wooden Doors', desc: 'Solid wood craftsmanship with heirloom-grade durability.', img: '/images/doors/wooden/wood-door-01.svg' },
+  { name: 'PVC Doors', desc: 'Low-maintenance, elegant, and ideal for modern interiors.', img: '/images/doors/pvc/gallery-02.svg' },
+  { name: 'Custom Doors', desc: 'Tailor-made dimensions, motifs, and hardware finishes.', img: '/images/doors/custom/gallery-01.svg' },
 ];
 
 export default function CollectionPage() {

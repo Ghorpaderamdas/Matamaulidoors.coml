@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -7,7 +7,7 @@ import { SectionTitle } from '@/components/common/SectionTitle';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 
-const gallery = ['/images/gallery-01.svg', '/images/gallery-02.svg', '/images/gallery-03.svg', '/images/gallery-04.svg'];
+const gallery = ['/images/doors/wooden/gallery-01.svg', '/images/doors/pvc/gallery-02.svg', '/images/doors/laminate/gallery-03.svg', '/images/doors/flush/gallery-04.svg'];
 
 export default function GalleryPage() {
   return (
