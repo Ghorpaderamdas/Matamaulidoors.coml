@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -52,28 +52,28 @@ const videoReviews = [
     title: "Premium Wooden Door Installation",
     author: "Priya Sharma",
     location: "BANGALORE",
-    thumbnail: "/images/door-01.svg",
+    thumbnail: "/images/doors/designer/door-01.svg",
   },
   {
     id: 2,
     title: "Designer Door Craftsmanship",
     author: "Vikram Reddy",
     location: "HYDERABAD",
-    thumbnail: "/images/door-02.svg",
+    thumbnail: "/images/doors/interior/door-02.svg",
   },
   {
     id: 3,
     title: "Interior Doors Transformation",
     author: "Anjali Verma",
     location: "DELHI",
-    thumbnail: "/images/door-03.svg",
+    thumbnail: "/images/doors/main-entrance/door-03.svg",
   },
   {
     id: 4,
     title: "Custom Door Design Showcase",
     author: "Rajesh Kumar",
     location: "KOLKATA",
-    thumbnail: "/images/gallery-01.svg",
+    thumbnail: "/images/doors/custom/gallery-01.svg",
   },
 ];
 

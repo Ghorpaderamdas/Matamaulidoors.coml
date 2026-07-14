@@ -24,26 +24,26 @@ export type DoorProduct = {
 };
 
 export const doorCategories: DoorCategory[] = [
-  { slug: 'designer', name: 'Designer Doors', label: 'SIGNATURE CRAFT', description: 'Sculptured statements with artful detailing, crafted to become the focal point of your home.', material: 'Engineered teak & veneer', image: '/images/door-01.svg' },
-  { slug: 'wooden', name: 'Wooden Doors', label: 'NATURAL ELEGANCE', description: 'Solid wood doors bringing the warmth, character and enduring strength of nature indoors.', material: 'Teak & hardwood', image: '/images/wood-door-01.svg' },
-  { slug: 'pvc', name: 'PVC Doors', label: 'MODERN & DURABLE', description: 'Practical, moisture-resistant doors with a clean contemporary expression for everyday living.', material: 'Premium PVC', image: '/images/gallery-02.svg' },
-  { slug: 'laminate', name: 'Laminate Doors', label: 'REFINED FINISH', description: 'High-pressure laminated surfaces that unite tactile luxury with effortless maintenance.', material: 'Laminated engineered core', image: '/images/gallery-03.svg' },
-  { slug: 'flush', name: 'Flush Doors', label: 'CLEAN MINIMALISM', description: 'Quietly sophisticated, perfectly proportioned doors for modern architectural spaces.', material: 'Engineered wood', image: '/images/gallery-04.svg' },
-  { slug: 'interior', name: 'Interior Doors', label: 'EVERYDAY LUXURY', description: 'Graceful room dividers designed for privacy, acoustic comfort and beautiful daily rituals.', material: 'Solid core wood', image: '/images/door-02.svg' },
-  { slug: 'main-entrance', name: 'Main Entrance Doors', label: 'GRAND STATEMENT', description: 'Commanding entrance doors with impressive craftsmanship, security and lasting presence.', material: 'Solid teak & metal', image: '/images/door-03.svg' },
-  { slug: 'custom', name: 'Custom Doors', label: 'MADE TO ORDER', description: 'A fully personal door experience, made around your dimensions, material and vision.', material: 'Material of your choice', image: '/images/gallery-01.svg' },
+  { slug: 'designer', name: 'Designer Doors', label: 'SIGNATURE CRAFT', description: 'Sculptured statements with artful detailing, crafted to become the focal point of your home.', material: 'Engineered teak & veneer', image: '/images/doors/designer/door-01.svg' },
+  { slug: 'wooden', name: 'Wooden Doors', label: 'NATURAL ELEGANCE', description: 'Solid wood doors bringing the warmth, character and enduring strength of nature indoors.', material: 'Teak & hardwood', image: '/images/doors/wooden/wood-door-01.svg' },
+  { slug: 'pvc', name: 'PVC Doors', label: 'MODERN & DURABLE', description: 'Practical, moisture-resistant doors with a clean contemporary expression for everyday living.', material: 'Premium PVC', image: '/images/doors/pvc/gallery-02.svg' },
+  { slug: 'laminate', name: 'Laminate Doors', label: 'REFINED FINISH', description: 'High-pressure laminated surfaces that unite tactile luxury with effortless maintenance.', material: 'Laminated engineered core', image: '/images/doors/laminate/gallery-03.svg' },
+  { slug: 'flush', name: 'Flush Doors', label: 'CLEAN MINIMALISM', description: 'Quietly sophisticated, perfectly proportioned doors for modern architectural spaces.', material: 'Engineered wood', image: '/images/doors/flush/gallery-04.svg' },
+  { slug: 'interior', name: 'Interior Doors', label: 'EVERYDAY LUXURY', description: 'Graceful room dividers designed for privacy, acoustic comfort and beautiful daily rituals.', material: 'Solid core wood', image: '/images/doors/interior/door-02.svg' },
+  { slug: 'main-entrance', name: 'Main Entrance Doors', label: 'GRAND STATEMENT', description: 'Commanding entrance doors with impressive craftsmanship, security and lasting presence.', material: 'Solid teak & metal', image: '/images/doors/main-entrance/door-03.svg' },
+  { slug: 'custom', name: 'Custom Doors', label: 'MADE TO ORDER', description: 'A fully personal door experience, made around your dimensions, material and vision.', material: 'Material of your choice', image: '/images/doors/custom/gallery-01.svg' },
 ];
 
 const images = [
-  '/images/wood-door-01.svg',
-  '/images/wood-door-02.svg',
-  '/images/door-01.svg',
-  '/images/door-02.svg',
-  '/images/door-03.svg',
-  '/images/gallery-01.svg',
-  '/images/gallery-02.svg',
-  '/images/gallery-03.svg',
-  '/images/gallery-04.svg',
+  '/images/doors/wooden/wood-door-01.svg',
+  '/images/doors/wooden/wood-door-02.svg',
+  '/images/doors/designer/door-01.svg',
+  '/images/doors/interior/door-02.svg',
+  '/images/doors/main-entrance/door-03.svg',
+  '/images/doors/custom/gallery-01.svg',
+  '/images/doors/pvc/gallery-02.svg',
+  '/images/doors/laminate/gallery-03.svg',
+  '/images/doors/flush/gallery-04.svg',
 ];
 
 const woodenModels = ['MBT-01', 'MBT-11', 'MBT-12', 'MBT-13', 'MBT-14', 'MBT-16', 'NC-01', 'NC-04', 'NC-12', 'NC-14'];
