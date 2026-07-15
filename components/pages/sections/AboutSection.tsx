@@ -63,7 +63,7 @@ export function AboutSection() {
           >
             <div className="relative aspect-[0.88] overflow-hidden rounded-[28px] sm:overflow-visible sm:rounded-[36px]">
               <Image
-                src="/images/about-door.jpg"
+                src="/images/about-profile.jpg"
                 alt="Premium handcrafted wooden door by Mata Mauli Industries"
                 fill
                 priority

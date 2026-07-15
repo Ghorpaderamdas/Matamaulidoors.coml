@@ -36,7 +36,7 @@ export function HeroSection() {
       `}</style>
 
       <Image
-        src="/images/about-door.jpg"
+        src="/images/about-profile.jpg"
         alt="Luxury handcrafted wooden door"
         fill
         priority
