@@ -15,61 +15,72 @@ const fadeUp: Variants = {
   },
 };
 
+const doorHomeImages = {
+  designer: '/images/doors/doorHomeImg/photo-1.avif',
+  wooden: '/images/doors/doorHomeImg/photo-2.avif',
+  pvc: '/images/doors/doorHomeImg/photo-3.jpg',
+  laminate: '/images/doors/doorHomeImg/photo-4.jpg',
+  flush: '/images/doors/doorHomeImg/photo-5.jpg',
+  interior: '/images/doors/doorHomeImg/photo-6.jpg',
+  'main-entrance': '/images/doors/doorHomeImg/premium-7.avif',
+  custom: '/images/doors/doorHomeImg/photo-8.avif',
+};
+
 const collections = [
   {
     name: 'Designer Doors',
     label: 'SIGNATURE CRAFT',
     desc: 'Sculptured statements - carved, beveled and finished by master craftsmen.',
-    img: '/images/doors/designer/door-01.svg',
+    img: doorHomeImages.designer,
     slug: 'designer',
   },
   {
     name: 'Wooden Doors',
     label: 'NATURAL ELEGANCE',
     desc: 'Solid oak, teak and sheesham engineered to last generations.',
-    img: '/images/doors/wooden/gallery-01.svg',
+    img: doorHomeImages.wooden,
     slug: 'wooden',
   },
   {
     name: 'PVC Doors',
     label: 'MODERN & DURABLE',
     desc: 'Contemporary design with weather-resistant, low-maintenance finish.',
-    img: '/images/doors/pvc/gallery-02.svg',
+    img: doorHomeImages.pvc,
     slug: 'pvc',
   },
   {
     name: 'Laminate Doors',
     label: 'REFINED FINISH',
     desc: 'High-pressure laminates with luxury textures and finishes.',
-    img: '/images/doors/laminate/gallery-03.svg',
+    img: doorHomeImages.laminate,
     slug: 'laminate',
   },
   {
     name: 'Flush Doors',
     label: 'CLEAN MINIMALISM',
     desc: 'Sleek, frameless design for contemporary and minimalist interiors.',
-    img: '/images/doors/flush/gallery-04.svg',
+    img: doorHomeImages.flush,
     slug: 'flush',
   },
   {
     name: 'Interior Doors',
     label: 'EVERYDAY LUXURY',
     desc: 'Room dividers designed for grace, privacy and acoustic control.',
-    img: '/images/doors/interior/door-02.svg',
+    img: doorHomeImages.interior,
     slug: 'interior',
   },
   {
     name: 'Main Entrance Doors',
     label: 'GRAND STATEMENT',
     desc: 'Statement entries with bold detailing and premium hardware.',
-    img: '/images/doors/main-entrance/door-03.svg',
+    img: doorHomeImages['main-entrance'],
     slug: 'main-entrance',
   },
   {
     name: 'Custom Doors',
     label: 'MADE TO ORDER',
     desc: 'Bespoke dimensions, motifs, and finishes tailored to your design.',
-    img: '/images/doors/custom/gallery-01.svg',
+    img: doorHomeImages.custom,
     slug: 'custom',
   },
 ];

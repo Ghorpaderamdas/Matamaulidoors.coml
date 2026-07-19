@@ -7,7 +7,16 @@ import { SectionTitle } from '@/components/common/SectionTitle';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 
-const gallery = ['/images/doors/wooden/gallery-01.svg', '/images/doors/pvc/gallery-02.svg', '/images/doors/laminate/gallery-03.svg', '/images/doors/flush/gallery-04.svg'];
+const gallery = [
+  '/images/gallery/gallery-01.jpg',
+  '/images/gallery/gallery-02.jpg',
+  '/images/gallery/gallery-03.jpg',
+  '/images/gallery/gallery-04.jpg',
+  '/images/gallery/gallery-05.jpg',
+  '/images/gallery/gallery-06.jpg',
+  '/images/gallery/gallery-07.jpg',
+  '/images/gallery/gallery-08.png',
+];
 
 export default function GalleryPage() {
   return (
@@ -36,6 +45,7 @@ export default function GalleryPage() {
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                   className="object-cover"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               </motion.div>
