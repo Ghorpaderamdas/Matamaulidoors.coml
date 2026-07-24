@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
@@ -63,7 +63,7 @@ export function AboutSection() {
           >
             <div className="relative aspect-[0.88] overflow-hidden rounded-[28px] sm:overflow-visible sm:rounded-[36px]">
               <Image
-                src="/images/about-profile.jpg"
+                src="https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550574/about-profile_iiiclx.jpg"
                 alt="Premium handcrafted wooden door by Mata Mauli Industries"
                 fill
                 priority

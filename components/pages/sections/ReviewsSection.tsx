@@ -52,28 +52,28 @@ const videoReviews = [
     title: "Premium Wooden Door Installation",
     author: "Priya Sharma",
     location: "BANGALORE",
-    thumbnail: "/images/doors/designer/door-01.svg",
+    thumbnail: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550272/CD-387_ltc1ng.png",
   },
   {
     id: 2,
     title: "Designer Door Craftsmanship",
     author: "Vikram Reddy",
     location: "HYDERABAD",
-    thumbnail: "/images/doors/interior/door-02.svg",
+    thumbnail: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550373/AD-4090_uhfu0p.png",
   },
   {
     id: 3,
     title: "Interior Doors Transformation",
     author: "Anjali Verma",
     location: "DELHI",
-    thumbnail: "/images/doors/main-entrance/door-03.svg",
+    thumbnail: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550442/AD-4935_gwgm8r.png",
   },
   {
     id: 4,
     title: "Custom Door Design Showcase",
     author: "Rajesh Kumar",
     location: "KOLKATA",
-    thumbnail: "/images/doors/custom/gallery-01.svg",
+    thumbnail: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550153/AD-6180_lutkkw.png",
   },
 ];
 
