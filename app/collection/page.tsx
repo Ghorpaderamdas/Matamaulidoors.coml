@@ -8,10 +8,10 @@ import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 
 const products = [
-  { name: 'Designer Doors', desc: 'Statement entryways with bespoke detailing and premium finishes.', img: '/images/doors/doorHomeImg/photo-1.avif' },
-  { name: 'Wooden Doors', desc: 'Solid wood craftsmanship with heirloom-grade durability.', img: '/images/doors/doorHomeImg/photo-2.avif' },
-  { name: 'PVC Doors', desc: 'Low-maintenance, elegant, and ideal for modern interiors.', img: '/images/doors/doorHomeImg/photo-3.jpg' },
-  { name: 'Custom Doors', desc: 'Tailor-made dimensions, motifs, and hardware finishes.', img: '/images/doors/doorHomeImg/photo-8.avif' },
+  { name: 'Designer Doors', desc: 'Statement entryways with bespoke detailing and premium finishes.', img: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550227/photo-1_fjfgxd.avif' },
+  { name: 'Wooden Doors', desc: 'Solid wood craftsmanship with heirloom-grade durability.', img: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550226/photo-2_r3rvdf.avif' },
+  { name: 'PVC Doors', desc: 'Low-maintenance, elegant, and ideal for modern interiors.', img: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550239/photo-3_l2iwz6.jpg' },
+  { name: 'Custom Doors', desc: 'Tailor-made dimensions, motifs, and hardware finishes.', img: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550251/photo-8_wksoyz.avif' },
 ];
 
 export default function CollectionPage() {

@@ -8,14 +8,14 @@ import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 
 const gallery = [
-  '/images/gallery/gallery-01.jpg',
-  '/images/gallery/gallery-02.jpg',
-  '/images/gallery/gallery-03.jpg',
-  '/images/gallery/gallery-04.jpg',
-  '/images/gallery/gallery-05.jpg',
-  '/images/gallery/gallery-06.jpg',
-  '/images/gallery/gallery-07.jpg',
-  '/images/gallery/gallery-08.png',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550600/gallery-01_rniufd.jpg',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550610/gallery-02_zwbsx8.jpg',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550651/gallery-03_miifm0.jpg',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550647/gallery-04_hjpd1v.jpg',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550651/gallery-05_oadd5o.jpg',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550651/gallery-06_ggnmmr.jpg',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550655/gallery-07_b8kqq9.jpg',
+  'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550665/gallery-08_wooicv.png',
 ];
 
 export default function GalleryPage() {

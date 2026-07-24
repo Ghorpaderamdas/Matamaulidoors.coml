@@ -23,106 +23,32 @@ export type DoorProduct = {
   popular: boolean;
 };
 
+const cloudinary = 'https://res.cloudinary.com/pnvdzj9w/image/upload';
+
 export const doorImages = {
   designer: [
-    '/images/doors/designer/CD-387.png',
-    '/images/doors/designer/CD-341.png',
-    '/images/doors/designer/CD-342.png',
-    '/images/doors/designer/CD-346.png',
-    '/images/doors/designer/CD-350.png',
-    '/images/doors/designer/CD-353.png',
-    '/images/doors/designer/CD-355.png',
-    '/images/doors/designer/CD-357.png',
-    '/images/doors/designer/CD-361.png',
-    '/images/doors/designer/CD-375.png',
-    '/images/doors/designer/CD-381.png',
-    '/images/doors/designer/CD-443.png',
+    `${cloudinary}/v1784550272/CD-387_ltc1ng.png`, `${cloudinary}/v1784550217/CD-341_gdkb6i.png`, `${cloudinary}/v1784550152/CD-342_ze2jpj.png`, `${cloudinary}/v1784550176/CD-346_ipcdtz.png`, `${cloudinary}/v1784550181/CD-350_us07tj.png`, `${cloudinary}/v1784550196/CD-353_b8ufas.png`, `${cloudinary}/v1784550249/CD-355_kzgouu.png`, `${cloudinary}/v1784550211/CD-357_dy8o5g.png`, `${cloudinary}/v1784550225/CD-361_jcaexo.png`, `${cloudinary}/v1784550218/CD-375_azemyy.png`, `${cloudinary}/v1784550231/CD-381_ct1fyn.png`, `${cloudinary}/v1784550267/CD-443_ozkm5m.png`,
   ],
   wooden: [
-    '/images/doors/wooden/AD-4001.png',
-    '/images/doors/wooden/AD-4017.png',
-    '/images/doors/wooden/AD-4025.png',
-    '/images/doors/wooden/AD-4033.png',
-    '/images/doors/wooden/AD-4035.png',
-    '/images/doors/wooden/AD-4037.png',
-    '/images/doors/wooden/AD-4040.png',
-    '/images/doors/wooden/AD-4044.png',
-    '/images/doors/wooden/AD-4045.png',
-    '/images/doors/wooden/AD-4047.png',
+    `${cloudinary}/v1784550539/AD-4001_tagb3b.png`, `${cloudinary}/v1784550515/AD-4017_c4ekbx.png`, `${cloudinary}/v1784550536/AD-4025_ltgvwf.png`, `${cloudinary}/v1784550530/AD-4033_svnawa.png`, `${cloudinary}/v1784550555/AD-4035_btbtdl.png`, `${cloudinary}/v1784550561/AD-4037_gmpnye.png`, `${cloudinary}/v1784550621/AD-4040_wsfgwo.png`, `${cloudinary}/v1784550636/AD-4044_tw2by7.png`, `${cloudinary}/v1784550583/AD-4045_hwz9qi.png`, `${cloudinary}/v1784550621/AD-4047_ke86ny.png`,
   ],
   pvc: [
-    '/images/doors/pvc/AD-6153.png',
-    '/images/doors/pvc/AD-6101.png',
-    '/images/doors/pvc/AD-6108.png',
-    '/images/doors/pvc/AD-6126.png',
-    '/images/doors/pvc/AD-6127.png',
-    '/images/doors/pvc/AD-6128.png',
-    '/images/doors/pvc/AD-6145.png',
-    '/images/doors/pvc/AD-6147.png',
-    '/images/doors/pvc/AD-6149.png',
-    '/images/doors/pvc/AD-6154.png',
+    `${cloudinary}/v1784550502/AD-6153_nvbytt.png`, `${cloudinary}/v1784550472/AD-6101_widsfl.png`, `${cloudinary}/v1784550477/AD-6108_umevxx.png`, `${cloudinary}/v1784550494/AD-6126_umqfq1.png`, `${cloudinary}/v1784550568/AD-6127_w3zzoo.png`, `${cloudinary}/v1784550487/AD-6128_qabkfs.png`, `${cloudinary}/v1784550493/AD-6145_ir3byi.png`, `${cloudinary}/v1784550560/AD-6147_hfixph.png`, `${cloudinary}/v1784550521/AD-6149_kn2nqs.png`, `${cloudinary}/v1784550504/AD-6154_gw8bgj.png`,
   ],
   laminate: [
-    '/images/doors/laminate/AD-4177.png',
-    '/images/doors/laminate/AD-4099.png',
-    '/images/doors/laminate/AD-4106.png',
-    '/images/doors/laminate/AD-4121.png',
-    '/images/doors/laminate/AD-4130.png',
-    '/images/doors/laminate/AD-4132.png',
-    '/images/doors/laminate/AD-4146.png',
-    '/images/doors/laminate/AD-4311.png',
-    '/images/doors/laminate/AD-4345.png',
-    '/images/doors/laminate/AD-6038.png',
+    `${cloudinary}/v1784550385/AD-4177_brmedy.png`, `${cloudinary}/v1784550372/AD-4099_qrpece.png`, `${cloudinary}/v1784550375/AD-4106_mca3zb.png`, `${cloudinary}/v1784550382/AD-4121_tfwt0j.png`, `${cloudinary}/v1784550373/AD-4130_irxifo.png`, `${cloudinary}/v1784550395/AD-4132_atly4u.png`, `${cloudinary}/v1784550396/AD-4146_lnm5gf.png`, `${cloudinary}/v1784550425/AD-4311_xlpqx2.png`, `${cloudinary}/v1784550395/AD-4345_f3kgil.png`, `${cloudinary}/v1784550409/AD-6038_drckfo.png`,
   ],
   flush: [
-    '/images/doors/flush/AD-6151.png',
-    '/images/doors/flush/AD-6175.png',
-    '/images/doors/flush/AD-6181.png',
-    '/images/doors/flush/AD-6182.png',
-    '/images/doors/flush/CD-351.png',
-    '/images/doors/flush/CD-484.png',
-    '/images/doors/flush/CD-486.png',
-    '/images/doors/flush/CD-487.png',
-    '/images/doors/flush/CD-488.png',
-    '/images/doors/flush/CD-489.png',
+    `${cloudinary}/v1784550280/AD-6151_ndtmlp.png`, `${cloudinary}/v1784550276/AD-6175_ydaxym.png`, `${cloudinary}/v1784550295/AD-6181_vsbpf5.png`, `${cloudinary}/v1784550358/AD-6182_iugfjm.png`, `${cloudinary}/v1784550301/CD-351_uhotcf.png`, `${cloudinary}/v1784550291/CD-484_e9vsn1.png`, `${cloudinary}/v1784550333/CD-486_aqflbh.png`, `${cloudinary}/v1784550347/CD-487_au1sjn.png`, `${cloudinary}/v1784550299/CD-488_tzv6hv.png`, `${cloudinary}/v1784550324/CD-489_v1s5vj.png`,
   ],
   interior: [
-    '/images/doors/interior/AD-4090.png',
-    '/images/doors/interior/AD-4005.png',
-    '/images/doors/interior/AD-4008.png',
-    '/images/doors/interior/AD-4011.png',
-    '/images/doors/interior/AD-4026.png',
-    '/images/doors/interior/AD-4036.png',
-    '/images/doors/interior/AD-4040.png',
-    '/images/doors/interior/AD-4048.png',
-    '/images/doors/interior/AD-434.png',
-    '/images/doors/interior/AD-5012.png',
+    `${cloudinary}/v1784550373/AD-4090_uhfu0p.png`, `${cloudinary}/v1784550315/AD-4005_p5ykv5.png`, `${cloudinary}/v1784550334/AD-4008_l6u6qo.png`, `${cloudinary}/v1784550339/AD-4011_mkzvzd.png`, `${cloudinary}/v1784550340/AD-4026_mmgjwe.png`, `${cloudinary}/v1784550348/AD-4036_qojvxt.png`, `${cloudinary}/v1784550348/AD-4040_yambvp.png`, `${cloudinary}/v1784550356/AD-4048_xfwirh.png`, `${cloudinary}/v1784550372/AD-434_bhbxzl.png`, `${cloudinary}/v1784550359/AD-5012_eyqmye.png`,
   ],
   'main-entrance': [
-    '/images/doors/main-entrance/AD-4935.png',
-    '/images/doors/main-entrance/AD-4101.png',
-    '/images/doors/main-entrance/AD-4111.png',
-    '/images/doors/main-entrance/AD-4137.png',
-    '/images/doors/main-entrance/AD-4142.png',
-    '/images/doors/main-entrance/AD-4318.png',
-    '/images/doors/main-entrance/AD-4376.png',
-    '/images/doors/main-entrance/AD-4386.png',
-    '/images/doors/main-entrance/AD-4659.png',
-    '/images/doors/main-entrance/AD-4936.png',
-    '/images/doors/main-entrance/AD-4937.png',
-    '/images/doors/main-entrance/AL-4014.png',
+    `${cloudinary}/v1784550442/AD-4935_gwgm8r.png`, `${cloudinary}/v1784550398/AD-4101_ho4rdo.png`, `${cloudinary}/v1784550447/AD-4111_dcd9cb.png`, `${cloudinary}/v1784550419/AD-4137_dmhpnf.png`, `${cloudinary}/v1784550420/AD-4142_nhfhgc.png`, `${cloudinary}/v1784550413/AD-4318_cv7wqq.png`, `${cloudinary}/v1784550437/AD-4376_ylzt4m.png`, `${cloudinary}/v1784550435/AD-4386_uatek3.png`, `${cloudinary}/v1784550444/AD-4659_onqd4r.png`, `${cloudinary}/v1784550479/AD-4936_lf7hub.png`, `${cloudinary}/v1784550446/AD-4937_fdb9tl.png`, `${cloudinary}/v1784550485/AL-4014_nyjkn3.png`,
   ],
   custom: [
-    '/images/doors/custom/AD-6180.png',
-    '/images/doors/custom/AD-4149.png',
-    '/images/doors/custom/AD-4184.png',
-    '/images/doors/custom/AD-4200.png',
-    '/images/doors/custom/AD-6178.png',
-    '/images/doors/custom/AD-6179.png',
-    '/images/doors/custom/AD-6197.png',
-    '/images/doors/custom/AD-6200.png',
-    '/images/doors/custom/CD-472.png',
-    '/images/doors/custom/CD-479.png',
+    `${cloudinary}/v1784550153/AD-6180_lutkkw.png`, `${cloudinary}/v1784550095/AD-4149_akq5uq.png`, `${cloudinary}/v1784550119/AD-4184_q1aab0.png`, `${cloudinary}/v1784550090/AD-4200_ibdmwq.png`, `${cloudinary}/v1784550083/AD-6178_lc2vi5.png`, `${cloudinary}/v1784550124/AD-6179_glb0kf.png`, `${cloudinary}/v1784550125/AD-6197_mhjmsm.png`, `${cloudinary}/v1784550167/AD-6200_hixkq0.png`, `${cloudinary}/v1784550183/CD-472_lo37eg.png`, `${cloudinary}/v1784550181/CD-479_chopby.png`,
   ],
 } as const;
 
@@ -145,38 +71,14 @@ const names = ['Heritage Panel', 'Contour', 'Classic Frame', 'Linear Grain', 'Es
 
 export const doorProducts: DoorProduct[] = doorCategories.flatMap((category) => {
   const categoryImages = doorImages[category.slug as DoorImageCategory];
-
   return categoryImages.map((image, index) => {
     const modelNumber = category.slug === 'wooden' ? woodenModels[index] : `${prefixes[category.slug]}-${String(index + 1).padStart(2, '0')}`;
     const name = names[index % names.length];
     const title = `${category.name.replace(' Doors', '')} ${name}`;
-
-    return {
-      id: `${category.slug}-${index + 1}`,
-      slug: modelNumber.toLowerCase(),
-      category: category.slug,
-      modelNumber,
-      title,
-      description: `${name} is a considered expression of material, proportion and enduring craftsmanship.`,
-      material: category.material,
-      finish: index % 2 === 0 ? 'Natural matte finish' : 'Hand-finished satin',
-      sizes: ['30 x 78 in', '32 x 80 in', '36 x 84 in'],
-      thickness: index % 3 === 0 ? '38 mm' : '35 mm',
-      thumbnail: image,
-      gallery: [image, categoryImages[(index + 1) % categoryImages.length], categoryImages[(index + 2) % categoryImages.length]],
-      popular: index < 3,
-    };
+    return { id: `${category.slug}-${index + 1}`, slug: modelNumber.toLowerCase(), category: category.slug, modelNumber, title, description: `${name} is a considered expression of material, proportion and enduring craftsmanship.`, material: category.material, finish: index % 2 === 0 ? 'Natural matte finish' : 'Hand-finished satin', sizes: ['30 x 78 in', '32 x 80 in', '36 x 84 in'], thickness: index % 3 === 0 ? '38 mm' : '35 mm', thumbnail: image, gallery: [image, categoryImages[(index + 1) % categoryImages.length], categoryImages[(index + 2) % categoryImages.length]], popular: index < 3 };
   });
 });
 
-export function getCategory(slug: string) {
-  return doorCategories.find((category) => category.slug === slug);
-}
-
-export function getCategoryProducts(category: string) {
-  return doorProducts.filter((product) => product.category === category);
-}
-
-export function getProduct(category: string, product: string) {
-  return doorProducts.find((item) => item.category === category && item.slug === product);
-}
+export function getCategory(slug: string) { return doorCategories.find((category) => category.slug === slug); }
+export function getCategoryProducts(category: string) { return doorProducts.filter((product) => product.category === category); }
+export function getProduct(category: string, product: string) { return doorProducts.find((item) => item.category === category && item.slug === product); }

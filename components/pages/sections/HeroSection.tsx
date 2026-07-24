@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
@@ -36,7 +36,7 @@ export function HeroSection() {
       `}</style>
 
       <Image
-        src="/images/about-profile.jpg"
+        src="https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550574/about-profile_iiiclx.jpg"
         alt="Luxury handcrafted wooden door"
         fill
         priority

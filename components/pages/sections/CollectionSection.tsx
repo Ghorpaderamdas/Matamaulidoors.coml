@@ -16,14 +16,14 @@ const fadeUp: Variants = {
 };
 
 const doorHomeImages = {
-  designer: '/images/doors/doorHomeImg/photo-1.avif',
-  wooden: '/images/doors/doorHomeImg/photo-2.avif',
-  pvc: '/images/doors/doorHomeImg/photo-3.jpg',
-  laminate: '/images/doors/doorHomeImg/photo-4.jpg',
-  flush: '/images/doors/doorHomeImg/photo-5.jpg',
-  interior: '/images/doors/doorHomeImg/photo-6.jpg',
-  'main-entrance': '/images/doors/doorHomeImg/premium-7.avif',
-  custom: '/images/doors/doorHomeImg/photo-8.avif',
+  designer: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550227/photo-1_fjfgxd.avif',
+  wooden: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550226/photo-2_r3rvdf.avif',
+  pvc: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550239/photo-3_l2iwz6.jpg',
+  laminate: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550256/photo-4_vmt6qo.jpg',
+  flush: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550277/photo-5_leh3hl.jpg',
+  interior: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550250/photo-6_bjz54u.jpg',
+  'main-entrance': 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550252/premium-7_oemry4.avif',
+  custom: 'https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550251/photo-8_wksoyz.avif',
 };
 
 const collections = [
