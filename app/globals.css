@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -51,10 +51,6 @@ textarea:focus-visible {
   padding-bottom: 4rem;
 }
 
-.gold {
-  color: var(--gold);
-}
-
 .luxury-shadow {
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08), 0 10px 30px rgba(0, 0, 0, 0.04);
 }
@@ -64,53 +60,6 @@ textarea:focus-visible {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(228, 220, 205, 0.9);
-}
-
-.editorial-title {
-  font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 500;
-}
-
-.editorial-italic {
-  font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--gold);
-}
-
-.body-copy {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #5D5D5D;
-}
-
-.stats-title {
-  font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.gold-divider {
-  height: 1px;
-  width: 160px;
-  max-width: 100%;
-  background: #DDC48F;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.image-radius {
-  border-radius: 28px;
-}
-
-.transition-slow {
-  transition: all 450ms ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-6px);
 }
 
 button {
@@ -354,14 +303,6 @@ button:hover {
     padding-bottom: 6rem;
   }
 
-  .editorial-title {
-    font-size: 3.75rem;
-  }
-
-  .body-copy {
-    font-size: 1.125rem;
-  }
-
   .luxury-nav {
     height: 112px;
   }
@@ -377,10 +318,6 @@ button:hover {
 }
 
 @media (min-width: 1024px) {
-  .editorial-title {
-    font-size: 4.5rem;
-  }
-
   .luxury-nav {
     height: 128px;
   }
@@ -416,6 +353,3 @@ button:hover {
     display: none;
   }
 }
-
-
-
