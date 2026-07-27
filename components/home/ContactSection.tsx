@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { ArrowRight, Mail, MapPin, PhoneCall } from "lucide-react";
-import { Container } from "@/components/common/Container";
+import { Container } from "@/components/ui/Container";
 
 export function ContactSection() {
   const inputClass =

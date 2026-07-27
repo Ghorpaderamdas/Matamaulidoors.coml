@@ -4,8 +4,8 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 
-import { Button } from "@/components/common/Button";
-import { Container } from "@/components/common/Container";
+import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },

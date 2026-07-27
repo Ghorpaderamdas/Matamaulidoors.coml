@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { Container } from '@/components/common/Container';
+import { Container } from '@/components/ui/Container';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 

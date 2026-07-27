@@ -3,7 +3,7 @@
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { Award, Clock, Gem, Lightbulb, Lock, Shield, Sparkles, Wrench } from 'lucide-react';
-import { Container } from '@/components/common/Container';
+import { Container } from '@/components/ui/Container';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
