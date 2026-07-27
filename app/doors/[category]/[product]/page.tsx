@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, MessageCircle, Phone, ShieldCheck } from 'lucide-react';
@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { ProductGallery } from '@/components/catalogue/ProductGallery';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
-import { doorProducts, getCategory, getCategoryProducts, getProduct } from '@/lib/catalogue';
+import { doorProducts, getCategory, getCategoryProducts, getProduct } from '@/data/catalogue';
 
 type Props = { params: Promise<{ category: string; product: string }> };
 
@@ -23,5 +23,3 @@ export default async function ProductPage({ params }: Props) {
 }
 
 function Spec({ label, value }: { label: string; value: string }) { return <div className="grid grid-cols-[110px_1fr] gap-4 py-4 font-sans text-sm"><dt className="text-[#6B7280]">{label}</dt><dd className="font-medium leading-6 text-[#111827]">{value}</dd></div>; }
-
-

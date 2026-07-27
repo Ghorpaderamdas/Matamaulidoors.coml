@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -199,7 +199,7 @@ export function Navbar() {
         <Link href="/#home" className="luxury-nav__brand" onClick={closeMobileMenu}>
           <span className="luxury-nav__logo">
             <Image
-              src="/images/logo.png"
+              src="/logo.png"
               alt="Mata Mauli Industries"
               fill
               priority
@@ -290,4 +290,3 @@ export function Navbar() {
     </motion.nav>
   );
 }
-
