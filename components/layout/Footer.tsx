@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
-import { Container } from '@/components/common/Container';
+import { Container } from '@/components/ui/Container';
 
 const socialLinks = [
   { icon: Instagram, href: '#instagram', label: 'Instagram' },

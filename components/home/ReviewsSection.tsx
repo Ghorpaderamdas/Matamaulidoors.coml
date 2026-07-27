@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { MessageSquare, Play, Star } from "lucide-react";
-import { Container } from "@/components/common/Container";
+import { Container } from "@/components/ui/Container";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
