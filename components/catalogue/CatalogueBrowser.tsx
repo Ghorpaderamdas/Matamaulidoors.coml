@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Grid2X2, List, Search, SlidersHorizontal } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import type { DoorProduct } from '@/lib/catalogue';
+import type { DoorProduct } from '@/data/catalogue';
 
 type Props = { products: DoorProduct[]; categoryName: string };
 type SortMode = 'newest' | 'popular' | 'az';

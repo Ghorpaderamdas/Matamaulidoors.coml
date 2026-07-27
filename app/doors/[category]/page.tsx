@@ -5,7 +5,7 @@ import { ChevronRight } from 'lucide-react';
 import { CatalogueBrowser } from '@/components/catalogue/CatalogueBrowser';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
-import { getCategory, getCategoryProducts } from '@/lib/catalogue';
+import { getCategory, getCategoryProducts } from '@/data/catalogue';
 
 type Props = { params: Promise<{ category: string }> };
 

@@ -18,7 +18,7 @@ export function Footer() {
           <div className="max-w-md">
             <div className="flex items-center gap-3">
               <div className="relative h-14 w-14 flex-shrink-0">
-                <Image src="/images/logo.png" alt="Mata Mauli Industries logo" fill sizes="56px" className="object-contain" />
+                <Image src="/logo.png" alt="Mata Mauli Industries logo" fill sizes="56px" className="object-contain" />
               </div>
               <div>
                 <div className="font-serif text-xl text-white md:text-2xl">MATA MAULI</div>
