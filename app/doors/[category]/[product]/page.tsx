@@ -10,6 +10,8 @@ import { doorProducts, getCategory, getCategoryProducts, getProduct } from '@/da
 
 type Props = { params: Promise<{ category: string; product: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() { return doorProducts.map((product) => ({ category: product.category, product: product.slug })); }
 export async function generateMetadata({ params }: Props): Promise<Metadata> { const { category, product } = await params; const item = getProduct(category, product); if (!item) return {}; return { title: `Premium ${item.title} ${item.modelNumber} | Mata Mauli Doors`, description: item.description }; }
 

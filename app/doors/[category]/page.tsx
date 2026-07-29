@@ -9,6 +9,8 @@ import { getCategory, getCategoryProducts } from '@/data/catalogue';
 
 type Props = { params: Promise<{ category: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return ['designer', 'wooden', 'pvc', 'laminate', 'flush', 'interior', 'main-entrance', 'custom'].map((category) => ({ category }));
 }

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
@@ -55,7 +55,7 @@ export default function AboutPage() {
               <div className="relative h-full overflow-hidden rounded-[28px] sm:overflow-visible sm:rounded-[34px]">
                 <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.8 }} className="h-full w-full">
                   <Image
-                    src="/images/about-door.jpg"
+                    src="https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550574/about-profile_iiiclx.jpg"
                     alt="Luxury handcrafted wooden door"
                     fill
                     priority
