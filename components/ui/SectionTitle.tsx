@@ -1,13 +1,22 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 type SectionTitleProps = {
   eyebrow: string;
   title: string;
   subtitle?: string;
   light?: boolean;
+  headingLevel?: "h1" | "h2";
 };
 
-export function SectionTitle({ eyebrow, title, subtitle, light = false }: SectionTitleProps) {
+export function SectionTitle({
+  eyebrow,
+  title,
+  subtitle,
+  light = false,
+  headingLevel = "h2",
+}: SectionTitleProps) {
+  const Heading = headingLevel;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -19,9 +28,9 @@ export function SectionTitle({ eyebrow, title, subtitle, light = false }: Sectio
       <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#C89B3C]">
         {eyebrow}
       </p>
-      <h2 className={`mt-4 font-serif text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl ${light ? 'text-white' : 'text-[#1B1B1B]'}`}>
+      <Heading className={`mt-4 font-serif text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl ${light ? 'text-white' : 'text-[#1B1B1B]'}`}>
         {title}
-      </h2>
+      </Heading>
       {subtitle ? (
         <p className={`mx-auto mt-4 max-w-2xl text-base leading-relaxed md:text-lg ${light ? 'text-white/70' : 'text-[#1B1B1B]/70'}`}>
           {subtitle}

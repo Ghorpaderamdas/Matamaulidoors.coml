@@ -28,6 +28,7 @@ export default function GalleryPage() {
             eyebrow="Gallery"
             title="Our doors in real homes."
             subtitle="See the workmanship, finishes, and scale of our completed projects."
+            headingLevel="h1"
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:mt-16 xl:grid-cols-4">
             {gallery.map((src, index) => (

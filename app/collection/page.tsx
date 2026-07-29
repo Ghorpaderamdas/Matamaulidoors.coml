@@ -24,6 +24,7 @@ export default function CollectionPage() {
             eyebrow="Collection"
             title="Doors made for every entrance and interior."
             subtitle="Explore our current product range, from designer panels to custom commissions."
+            headingLevel="h1"
           />
           <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-2 md:gap-8">
             {products.map((product, index) => (

@@ -1,9 +1,10 @@
-﻿import "./globals.css";
+import "./globals.css";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   createLocalBusinessJsonLd,
+  createOrganizationJsonLd,
   createWebsiteJsonLd,
   siteDescription,
   siteName,
@@ -99,10 +100,15 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
-        <JsonLd data={[createLocalBusinessJsonLd(), createWebsiteJsonLd()]} />
+        <JsonLd
+          data={[
+            createOrganizationJsonLd(),
+            createLocalBusinessJsonLd(),
+            createWebsiteJsonLd(),
+          ]}
+        />
         <div id="main-content" tabIndex={-1}>{children}</div>
       </body>
     </html>
   );
 }
-

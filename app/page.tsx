@@ -1,6 +1,12 @@
-﻿import { LandingPage } from "@/components/home/LandingPage";
+import { LandingPage } from "@/components/home/LandingPage";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { createFaqJsonLd } from "@/lib/metadata";
+import { createFaqJsonLd, createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(
+  "Premium Wooden, PVC & Designer Doors in Nashik",
+  "Explore handcrafted wooden, PVC, designer, laminate, flush, interior, and custom doors from Mata Mauli Industries in Igatpuri, Nashik.",
+  "/",
+);
 
 const faqJsonLd = createFaqJsonLd([
   {

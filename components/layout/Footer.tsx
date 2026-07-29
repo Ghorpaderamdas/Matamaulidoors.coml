@@ -1,4 +1,4 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 
@@ -45,10 +45,17 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.28em] text-[#d4a574]">Products</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
-              {['Designer Doors', 'Wooden Doors', 'PVC Doors', 'Laminate Doors', 'Flush Doors', 'Interior Doors'].map((item) => (
-                <li key={item}>
-                  <a href="/#collection" className="inline-flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
-                    {item}
+              {[
+                { label: 'Designer Doors', href: '/doors/designer' },
+                { label: 'Wooden Doors', href: '/doors/wooden' },
+                { label: 'PVC Doors', href: '/doors/pvc' },
+                { label: 'Laminate Doors', href: '/doors/laminate' },
+                { label: 'Flush Doors', href: '/doors/flush' },
+                { label: 'Interior Doors', href: '/doors/interior' },
+              ].map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} className="inline-flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -59,9 +66,9 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-[0.28em] text-[#d4a574]">Quick Links</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               {[
-                { label: 'About', href: '/#about' },
-                { label: 'Why Choose Us', href: '/#why' },
-                { label: 'Gallery', href: '/#gallery' },
+                { label: 'About', href: '/about' },
+                { label: 'Why Choose Us', href: '/why' },
+                { label: 'Gallery', href: '/gallery' },
                 { label: 'FAQ', href: '/#faq' },
                 { label: 'Contact', href: '/#contact' },
                 { label: 'Get Free Quote', href: '/#contact' },
@@ -87,4 +94,3 @@ export function Footer() {
     </footer>
   );
 }
-
