@@ -41,7 +41,6 @@ export function GallerySection() {
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                 className="object-cover"
-                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             </motion.div>
