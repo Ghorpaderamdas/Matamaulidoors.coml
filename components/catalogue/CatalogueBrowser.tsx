@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -39,7 +39,7 @@ export function CatalogueBrowser({ products, categoryName }: Props) {
             <SlidersHorizontal className="ml-1 text-[#C89B3C]" size={17} aria-hidden="true" />
             <label className="sr-only" htmlFor="catalogue-sort">Sort products</label>
             <select id="catalogue-sort" value={sort} onChange={(event) => setSort(event.target.value as SortMode)} className="h-12 min-w-0 flex-1 rounded-xl border border-[#E8DCC8] bg-white px-3 font-sans text-sm text-[#1B1B1B] focus:border-[#C89B3C] focus:outline-none md:w-36 md:flex-none">
-              <option value="newest">Newest</option><option value="popular">Popular</option><option value="az">A–Z</option>
+              <option value="newest">Newest</option><option value="popular">Popular</option><option value="az">A-Z</option>
             </select>
             <div className="flex h-12 rounded-xl border border-[#E8DCC8] bg-white p-1">
               <button type="button" onClick={() => setListView(false)} aria-label="Grid view" aria-pressed={!listView} className={`grid h-full w-10 place-items-center rounded-lg ${!listView ? 'bg-[#1B1B1B] text-white' : 'text-[#786F64]'}`}><Grid2X2 size={17} /></button>
@@ -65,3 +65,4 @@ function ProductCard({ product, listView }: { product: DoorProduct; listView: bo
     <div className="flex flex-1 flex-col p-5"><p className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C89B3C]">{product.material}</p><h2 className="mt-2 font-serif text-2xl leading-none text-[#1B1B1B]">{product.title}</h2><p className="mt-3 line-clamp-2 font-sans text-sm leading-6 text-[#68615A]">{product.description}</p><div className="mt-5 flex gap-3"><Link href={`/doors/${product.category}/${product.slug}`} className="inline-flex min-h-10 flex-1 items-center justify-center rounded-full border border-[#C89B3C] px-4 font-sans text-xs font-semibold text-[#1B1B1B] transition hover:bg-[#C89B3C] hover:text-white">Quick View</Link><Link href={`/doors/${product.category}/${product.slug}`} className="inline-flex min-h-10 flex-1 items-center justify-center rounded-full bg-[#1B1B1B] px-4 font-sans text-xs font-semibold text-white transition hover:bg-[#C89B3C]">View Details</Link></div></div>
   </article>;
 }
+

@@ -6,7 +6,7 @@ export function FloatingContactButtons() {
   return (
     <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-3 sm:bottom-6 sm:right-6 sm:gap-4">
       <Link
-        href="https://wa.me/919999999999"
+        href="https://wa.me/917218554183"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
@@ -23,7 +23,7 @@ export function FloatingContactButtons() {
       </Link>
 
       <Link
-        href="tel:+919999999999"
+        href="tel:+917218554183"
         className="flex h-14 w-14 items-center justify-center rounded-full bg-[#D4A574] text-[#2B2B2B] shadow-[0_10px_30px_rgba(212,165,116,.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(212,165,116,.45)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#D4A574]/35 focus-visible:ring-offset-2 sm:h-16 sm:w-16"
         aria-label="Call us"
       >
@@ -34,3 +34,4 @@ export function FloatingContactButtons() {
     </div>
   );
 }
+

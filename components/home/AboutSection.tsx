@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
@@ -75,7 +75,7 @@ export function AboutSection() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-gradient-to-br from-[#FAF7F2] via-[#F3ECE0] to-[#E9DAC1]">
 
                 <Image
-                  src="https://res.cloudinary.com/pnvdzj9w/image/upload/v1784976753/ProfileBU_l3kivu.png"
+                  src="https://res.cloudinary.com/pnvdzj9w/image/upload/v1785164298/ProfileBU0_jr73l6.png"
                   alt="Premium handcrafted wooden door by Mata Mauli Industries"
                   fill
                   priority
@@ -98,6 +98,7 @@ export function AboutSection() {
                       key={index}
                       size={16}
                       fill="currentColor"
+                      aria-hidden="true"
                     />
                   ))}
                 </div>
@@ -167,7 +168,7 @@ export function AboutSection() {
             <p className="mt-8 text-lg leading-9 text-[#5F5F5F]">
               Every Mata Mauli door is crafted from carefully selected timber,
               precision joinery, and premium hardware. Our doors are designed
-              not just for today—but for generations to come.
+              not just for today - but for generations to come.
             </p>
 
             {/* Stats */}
@@ -222,5 +223,8 @@ export function AboutSection() {
     </section>
   );
 }
+
+
+
 
 

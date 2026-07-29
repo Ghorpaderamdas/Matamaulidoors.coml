@@ -1,12 +1,12 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 
 const socialLinks = [
-  { icon: Instagram, href: '#instagram', label: 'Instagram' },
-  { icon: Facebook, href: '#facebook', label: 'Facebook' },
-  { icon: Youtube, href: '#youtube', label: 'YouTube' },
-  { icon: Linkedin, href: '#linkedin', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://www.instagram.com/', label: 'Instagram' },
+  { icon: Facebook, href: 'https://www.facebook.com/', label: 'Facebook' },
+  { icon: Youtube, href: 'https://www.youtube.com/', label: 'YouTube' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/', label: 'LinkedIn' },
 ];
 
 export function Footer() {
@@ -47,7 +47,7 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               {['Designer Doors', 'Wooden Doors', 'PVC Doors', 'Laminate Doors', 'Flush Doors', 'Interior Doors'].map((item) => (
                 <li key={item}>
-                  <a href="#collection" className="inline-flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
+                  <a href="/#collection" className="inline-flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
                     {item}
                   </a>
                 </li>
@@ -59,12 +59,12 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-[0.28em] text-[#d4a574]">Quick Links</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               {[
-                { label: 'About', href: '#about' },
-                { label: 'Why Choose Us', href: '#why' },
-                { label: 'Gallery', href: '#gallery' },
-                { label: 'FAQ', href: '#faq' },
-                { label: 'Contact', href: '#contact' },
-                { label: 'Get Free Quote', href: '#contact' },
+                { label: 'About', href: '/#about' },
+                { label: 'Why Choose Us', href: '/#why' },
+                { label: 'Gallery', href: '/#gallery' },
+                { label: 'FAQ', href: '/#faq' },
+                { label: 'Contact', href: '/#contact' },
+                { label: 'Get Free Quote', href: '/#contact' },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="inline-flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
@@ -87,3 +87,4 @@ export function Footer() {
     </footer>
   );
 }
+

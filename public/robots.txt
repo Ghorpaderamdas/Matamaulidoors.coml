@@ -1,5 +1,0 @@
-User-agent: *
-User-agent: *
-Allow: /
-
-Sitemap: https://matamaulidoors.com/sitemap.xml

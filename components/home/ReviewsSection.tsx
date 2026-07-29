@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { KeyboardEvent, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { MessageSquare, Play, Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -80,6 +80,15 @@ const videoReviews = [
 export function ReviewsSection() {
   const [activeTab, setActiveTab] = useState<"text" | "video">("text");
 
+  const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+
+    event.preventDefault();
+    const nextTab = activeTab === "text" ? "video" : "text";
+    setActiveTab(nextTab);
+    requestAnimationFrame(() => document.getElementById(`reviews-tab-${nextTab}`)?.focus());
+  };
+
   return (
     <section
       id="reviews"
@@ -116,12 +125,15 @@ export function ReviewsSection() {
           <button
             type="button"
             onClick={() => setActiveTab("text")}
+            onKeyDown={handleTabKeyDown}
             className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-base font-semibold transition-all duration-300 sm:px-8 ${
               activeTab === "text"
                 ? "bg-[#C89B3C] text-white shadow-[0_10px_30px_rgba(200,155,60,.3)]"
                 : "border border-[#D7BE8E] text-[#1B1B1B] hover:border-[#C89B3C]"
             }`}
+            id="reviews-tab-text"
             role="tab"
+            aria-controls="reviews-panel-text"
             aria-selected={activeTab === "text"}
           >
             <MessageSquare size={18} aria-hidden="true" />
@@ -130,12 +142,15 @@ export function ReviewsSection() {
           <button
             type="button"
             onClick={() => setActiveTab("video")}
+            onKeyDown={handleTabKeyDown}
             className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-base font-semibold transition-all duration-300 sm:px-8 ${
               activeTab === "video"
                 ? "bg-[#C89B3C] text-white shadow-[0_10px_30px_rgba(200,155,60,.3)]"
                 : "border border-[#D7BE8E] text-[#1B1B1B] hover:border-[#C89B3C]"
             }`}
+            id="reviews-tab-video"
             role="tab"
+            aria-controls="reviews-panel-video"
             aria-selected={activeTab === "video"}
           >
             <Play size={18} aria-hidden="true" />
@@ -145,6 +160,9 @@ export function ReviewsSection() {
 
         {activeTab === "text" ? (
           <motion.div
+            id="reviews-panel-text"
+            role="tabpanel"
+            aria-labelledby="reviews-tab-text"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -188,6 +206,9 @@ export function ReviewsSection() {
           </motion.div>
         ) : (
           <motion.div
+            id="reviews-panel-video"
+            role="tabpanel"
+            aria-labelledby="reviews-tab-video"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}

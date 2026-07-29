@@ -1,29 +1,57 @@
-import "./globals.css";
+﻿import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
-import "./globals.css";
+import { Cormorant_Garamond, Inter } from "next/font/google";
+import { JsonLd } from "@/components/seo/JsonLd";
+import {
+  createLocalBusinessJsonLd,
+  createWebsiteJsonLd,
+  siteDescription,
+  siteName,
+  siteUrl,
+} from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://matamaulidoors.com"),
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
   title: {
     default: "Mata Mauli Doors | Premium Doors in Nashik",
     template: "%s | Mata Mauli Doors",
   },
-  description:
-    "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik by Mata Mauli Industries.",
+  description: siteDescription,
+  keywords: [
+    "premium doors Nashik",
+    "wooden doors Nashik",
+    "designer doors Igatpuri",
+    "custom doors Maharashtra",
+    "PVC doors India",
+  ],
+  authors: [{ name: "Mata Mauli Industries" }],
+  creator: "Mata Mauli Industries",
+  publisher: "Mata Mauli Industries",
   icons: {
     icon: "/logo.png",
+    apple: "/logo.png",
   },
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "Mata Mauli Doors",
+    siteName,
     title: "Mata Mauli Doors | Premium Doors in Nashik",
-    description:
-      "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik by Mata Mauli Industries.",
+    description: siteDescription,
     url: "/",
     images: [
       {
@@ -37,59 +65,44 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mata Mauli Doors | Premium Doors in Nashik",
-    description:
-      "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik by Mata Mauli Industries.",
+    description: siteDescription,
     images: ["/logo.png"],
   },
-};
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Mata Mauli Doors",
-  description: "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik.",
-  url: "https://matamaulidoors.com",
-  telephone: "+917218554183",
-  email: "info@matamaulidoors.com",
-  image: "https://matamaulidoors.com/logo.png",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Near Maruti Mandir, Taked BK",
-    addressLocality: "Igatpuri",
-    addressRegion: "Maharashtra",
-    postalCode: "422403",
-    addressCountry: "IN",
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
   },
 };
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-serif",
+  display: "swap",
 });
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${cormorant.variable}`}
-    >
+    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
-        {children}
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <JsonLd data={[createLocalBusinessJsonLd(), createWebsiteJsonLd()]} />
+        <div id="main-content" tabIndex={-1}>{children}</div>
       </body>
     </html>
   );
 }
+
