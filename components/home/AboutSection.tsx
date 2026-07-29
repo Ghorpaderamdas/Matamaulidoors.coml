@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
@@ -118,9 +118,9 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 className="absolute bottom-4 right-4 rounded-[28px] border border-[#E7DBC7] bg-white/90 px-8 py-8 shadow-xl backdrop-blur-lg md:right-0 md:translate-x-8 md:translate-y-8"
               >
-                <h3 className="font-serif text-6xl font-light text-[#C89B3C]">
+                <p className="font-serif text-6xl font-light text-[#C89B3C]">
                   25+
-                </h3>
+                </p>
 
                 <p className="mt-4 text-xs uppercase tracking-[0.25em] text-gray-500">
                   Years of
@@ -186,9 +186,9 @@ export function AboutSection() {
                   }}
                   className="rounded-2xl border border-[#E8DED0] bg-white p-6 shadow-sm hover:shadow-xl"
                 >
-                  <h3 className="font-serif text-4xl text-[#1B1B1B]">
+                  <p className="font-serif text-4xl text-[#1B1B1B]">
                     {item.value}
-                  </h3>
+                  </p>
 
                   <p className="mt-3 text-xs uppercase tracking-[0.22em] text-gray-500">
                     {item.label}

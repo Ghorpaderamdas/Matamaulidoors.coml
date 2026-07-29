@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { notFound } from "next/navigation";
@@ -24,9 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!category) return {};
 
+  const products = getCategoryProducts(category.slug);
+
   return createPageMetadata(
-    `${category.name} Collection`,
-    category.description,
+    `${category.name} in Nashik`,
+    `${category.description} Browse ${products.length} handcrafted ${category.name.toLowerCase()} from Mata Mauli Doors in Igatpuri, Nashik.`,
     `/doors/${category.slug}`,
     {
       url: category.image,
@@ -50,6 +52,7 @@ export default async function CategoryPage({ params }: Props) {
       <BreadcrumbJsonLd
         items={[
           { name: "Home", path: "/" },
+          { name: "Collection", path: "/collection" },
           { name: category.name, path: `/doors/${category.slug}` },
         ]}
       />

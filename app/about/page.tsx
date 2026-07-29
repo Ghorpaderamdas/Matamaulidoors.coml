@@ -89,9 +89,9 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   className="glass luxury-shadow absolute bottom-4 right-4 w-[min(235px,calc(100%-2rem))] rounded-[24px] border border-[#E7DCC7] bg-white/90 p-6 backdrop-blur-xl sm:-bottom-8 sm:right-2 sm:rounded-[28px] sm:p-8"
                 >
-                  <h3 className="font-serif text-5xl font-light text-[#C89B3C]">
+                  <p className="font-serif text-5xl font-light text-[#C89B3C]">
                     25+
-                  </h3>
+                  </p>
 
                   <p className="mt-2 text-xs uppercase leading-6 tracking-[0.24em] text-[#707070]">
                     Years of
@@ -167,9 +167,9 @@ export default function AboutPage() {
               >
                 {stats.map((stat) => (
                   <motion.div key={stat.label} variants={item} whileHover={{ y: -6 }} className="group">
-                    <h3 className="font-serif text-4xl text-[#1B1B1B] transition-all group-hover:text-[#C89B3C] md:text-5xl">
+                    <p className="font-serif text-4xl text-[#1B1B1B] transition-all group-hover:text-[#C89B3C] md:text-5xl">
                       {stat.value}
-                    </h3>
+                    </p>
                     <p className="mt-3 text-xs uppercase leading-5 tracking-[0.24em] text-[#777]">
                       {stat.label}
                     </p>

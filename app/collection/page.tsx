@@ -46,9 +46,9 @@ export default function CollectionPage() {
                   />
                 </div>
                 <div className="p-6 md:p-8">
-                  <h3 className="font-serif text-xl font-semibold text-[#1B1B1B] md:text-2xl">
+                  <h2 className="font-serif text-xl font-semibold text-[#1B1B1B] md:text-2xl">
                     {product.name}
-                  </h3>
+                  </h2>
                   <p className="mt-3 text-base leading-7 text-[#1B1B1B]/70 md:text-lg md:leading-8">
                     {product.desc}
                   </p>

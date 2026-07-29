@@ -1,10 +1,10 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
   "Why Choose Mata Mauli Doors",
-  "Discover the materials, precision, durability, modern design, and bespoke sizing behind Mata Mauli premium doors.",
+  "Discover why homeowners choose Mata Mauli for premium materials, precision manufacturing, durable finishes, custom sizes, and handcrafted doors in Nashik.",
   "/why",
 );
 

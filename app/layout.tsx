@@ -15,15 +15,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
   title: {
-    default: "Mata Mauli Doors | Premium Doors in Nashik",
+    default: "Mata Mauli Doors | Premium Door Manufacturer in Nashik",
     template: "%s | Mata Mauli Doors",
   },
   description: siteDescription,
   keywords: [
     "premium doors Nashik",
-    "wooden doors Nashik",
-    "designer doors Igatpuri",
-    "custom doors Maharashtra",
+    "door manufacturer Nashik",
+    "wooden doors Igatpuri",
+    "designer doors Maharashtra",
+    "custom doors Nashik",
     "PVC doors India",
   ],
   authors: [{ name: "Mata Mauli Industries" }],
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
   },
   robots: {
     index: true,
@@ -51,9 +52,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName,
-    title: "Mata Mauli Doors | Premium Doors in Nashik",
+    title: "Mata Mauli Doors | Premium Door Manufacturer in Nashik",
     description: siteDescription,
-    url: "/",
+    url: siteUrl,
     images: [
       {
         url: "/logo.png",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mata Mauli Doors | Premium Doors in Nashik",
+    title: "Mata Mauli Doors | Premium Door Manufacturer in Nashik",
     description: siteDescription,
     images: ["/logo.png"],
   },

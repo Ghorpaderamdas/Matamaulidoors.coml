@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { KeyboardEvent, useState } from "react";
@@ -194,9 +194,9 @@ export function ReviewsSection() {
                 </p>
 
                 <div>
-                  <h4 className="text-base font-semibold text-[#1B1B1B] md:text-lg">
+                  <p className="text-base font-semibold text-[#1B1B1B] md:text-lg">
                     {review.author}
-                  </h4>
+                  </p>
                   <p className="mt-1 text-xs uppercase tracking-[0.28em] text-[#999]">
                     {review.location}
                   </p>
@@ -242,9 +242,9 @@ export function ReviewsSection() {
                   </div>
 
                   <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                    <h4 className="mb-2 font-serif text-xl font-light leading-tight md:text-2xl">
+                    <h3 className="mb-2 font-serif text-xl font-light leading-tight md:text-2xl">
                       {video.title}
-                    </h4>
+                    </h3>
                     <p className="mb-3 text-sm leading-relaxed text-gray-300">
                       {video.author}
                     </p>
@@ -281,9 +281,9 @@ export function ReviewsSection() {
                     <Star size={18} className="text-[#C89B3C]" fill="#C89B3C" aria-hidden="true" />
                   </div>
                   <div>
-                    <h4 className="text-base font-semibold text-[#1B1B1B] md:text-lg">
+                    <p className="text-base font-semibold text-[#1B1B1B] md:text-lg">
                       Rate Your Door
-                    </h4>
+                    </p>
                     <p className="mt-1 text-sm leading-6 text-[#5F5F5F] md:text-base">
                       Share how satisfied you are with your Mata Mauli door
                     </p>
@@ -295,9 +295,9 @@ export function ReviewsSection() {
                     <MessageSquare size={18} className="text-[#C89B3C]" aria-hidden="true" />
                   </div>
                   <div>
-                    <h4 className="text-base font-semibold text-[#1B1B1B] md:text-lg">
+                    <p className="text-base font-semibold text-[#1B1B1B] md:text-lg">
                       Write a Review
-                    </h4>
+                    </p>
                     <p className="mt-1 text-sm leading-6 text-[#5F5F5F] md:text-base">
                       Tell others about your experience with our craftsmanship
                     </p>

@@ -1,14 +1,28 @@
-﻿import { Navbar } from '@/components/layout/Navbar';
+import dynamic from 'next/dynamic';
+import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/home/HeroSection';
-import { AboutSection } from '@/components/home/AboutSection';
-import { CollectionSection } from '@/components/home/CollectionSection';
-import { WhySection } from '@/components/home/WhySection';
-import { GallerySection } from '@/components/home/GallerySection';
-import { ReviewsSection } from '@/components/home/ReviewsSection';
-import { FAQSection } from '@/components/home/FAQSection';
 import { ContactSection } from '@/components/home/ContactSection';
 import { FloatingContactButtons } from '@/components/ui/FloatingContactButtons';
+
+const AboutSection = dynamic(() =>
+  import('@/components/home/AboutSection').then((module) => module.AboutSection),
+);
+const CollectionSection = dynamic(() =>
+  import('@/components/home/CollectionSection').then((module) => module.CollectionSection),
+);
+const WhySection = dynamic(() =>
+  import('@/components/home/WhySection').then((module) => module.WhySection),
+);
+const GallerySection = dynamic(() =>
+  import('@/components/home/GallerySection').then((module) => module.GallerySection),
+);
+const ReviewsSection = dynamic(() =>
+  import('@/components/home/ReviewsSection').then((module) => module.ReviewsSection),
+);
+const FAQSection = dynamic(() =>
+  import('@/components/home/FAQSection').then((module) => module.FAQSection),
+);
 
 export function LandingPage() {
   return (
@@ -27,5 +41,3 @@ export function LandingPage() {
     </main>
   );
 }
-
-

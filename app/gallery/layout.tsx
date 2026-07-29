@@ -1,10 +1,10 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
   "Door Project Gallery",
-  "View completed Mata Mauli door projects, showcasing premium craftsmanship, finishes, and designs for homes across India.",
+  "View Mata Mauli completed wooden, PVC, designer, and custom door projects showcasing premium craftsmanship, finishes, and installations across India.",
   "/gallery",
 );
 

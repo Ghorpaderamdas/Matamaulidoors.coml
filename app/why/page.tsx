@@ -42,9 +42,9 @@ export default function WhyPage() {
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3EEE5] text-[#B58C33]">
                     <Icon size={22} aria-hidden="true" />
                   </div>
-                  <h3 className="mt-6 font-serif text-xl font-semibold text-[#1B1B1B] md:text-2xl">
+                  <h2 className="mt-6 font-serif text-xl font-semibold text-[#1B1B1B] md:text-2xl">
                     {feature.title}
-                  </h3>
+                  </h2>
                   <p className="mt-4 text-base leading-7 text-[#1B1B1B]/70 md:text-lg md:leading-8">
                     {feature.desc}
                   </p>

@@ -1,10 +1,10 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata(
-  "About Our Craftsmanship",
-  "Learn how Mata Mauli Industries has handcrafted premium doors in Igatpuri, Nashik for more than 25 years.",
+  "About Mata Mauli Door Craftsmanship",
+  "Learn about Mata Mauli Industries, a family-run premium door manufacturer handcrafting wooden, PVC, and custom doors in Igatpuri, Nashik for 25+ years.",
   "/about",
 );
 

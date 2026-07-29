@@ -359,7 +359,7 @@ export function HeroSection() {
                     <Icon className="h-5 w-5 text-[#C89B3C] transition-transform duration-300 group-hover:scale-110" />
                   </div>
                 </div>
-                <h4 className="text-xs font-semibold text-white/90 transition-colors duration-300 group-hover:text-white sm:text-sm">{feature.label}</h4>
+                <p className="text-xs font-semibold text-white/90 transition-colors duration-300 group-hover:text-white sm:text-sm">{feature.label}</p>
                 <p className="mt-0.5 text-[10px] text-white/60 transition-colors duration-300 group-hover:text-white/80 sm:text-xs">{feature.description}</p>
               </div>
             );
