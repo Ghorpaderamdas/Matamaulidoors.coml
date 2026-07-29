@@ -66,7 +66,6 @@ const backgroundImages = [
 
 export function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isMounted, setIsMounted] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
   const goToNextImage = useCallback(() => {
@@ -79,10 +78,6 @@ export function HeroSection() {
     setCurrentImageIndex((prevIndex) => 
       prevIndex === 0 ? backgroundImages.length - 1 : prevIndex - 1
     );
-  }, []);
-
-  useEffect(() => {
-    setIsMounted(true);
   }, []);
 
   useEffect(() => {
@@ -107,11 +102,6 @@ export function HeroSection() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [goToNextImage, goToPreviousImage]);
-
-  // Don't render until mounted to avoid hydration mismatch
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <section

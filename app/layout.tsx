@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   description:
     "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik by Mata Mauli Industries.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
+  },
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
     type: "website",
@@ -21,6 +24,41 @@ export const metadata: Metadata = {
     title: "Mata Mauli Doors | Premium Doors in Nashik",
     description:
       "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik by Mata Mauli Industries.",
+    url: "/",
+    images: [
+      {
+        url: "/logo.png",
+        width: 640,
+        height: 487,
+        alt: "Mata Mauli Doors logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mata Mauli Doors | Premium Doors in Nashik",
+    description:
+      "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik by Mata Mauli Industries.",
+    images: ["/logo.png"],
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Mata Mauli Doors",
+  description: "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik.",
+  url: "https://matamaulidoors.com",
+  telephone: "+917218554183",
+  email: "info@matamaulidoors.com",
+  image: "https://matamaulidoors.com/logo.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Near Maruti Mandir, Taked BK",
+    addressLocality: "Igatpuri",
+    addressRegion: "Maharashtra",
+    postalCode: "422403",
+    addressCountry: "IN",
   },
 };
 
@@ -45,7 +83,13 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${cormorant.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
