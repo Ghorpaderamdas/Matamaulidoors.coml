@@ -87,22 +87,6 @@ export function HeroSection() {
     }
   }, [isPaused, goToNextImage]);
 
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
-        e.preventDefault();
-        goToNextImage();
-      } else if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        goToPreviousImage();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [goToNextImage, goToPreviousImage]);
-
   return (
     <section
       id="home"
@@ -220,7 +204,8 @@ export function HeroSection() {
           opacity: 0;
           transition: opacity 0.3s ease;
         }
-        .group:hover .slide-control {
+        .group:hover .slide-control,
+        .slide-control:focus-visible {
           opacity: 1;
         }
         .progress-bar {
@@ -254,7 +239,7 @@ export function HeroSection() {
           >
             <Image
               src={img.url}
-              alt={img.alt}
+              alt={index === currentImageIndex ? img.alt : ""}
               fill
               priority={index === 0}
               sizes="100vw"
