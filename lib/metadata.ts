@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { DoorCategory, DoorProduct } from "@/data/catalogue";
 
 export const siteUrl = "https://matamaulidoors.com";
@@ -66,13 +66,36 @@ export function createBreadcrumbJsonLd(
   };
 }
 
+export function createOrganizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: siteName,
+    legalName: "Mata Mauli Industries",
+    url: siteUrl,
+    logo: new URL(defaultImage.url, siteUrl).toString(),
+    email: "info@matamaulidoors.com",
+    telephone: "+917218554183",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+917218554183",
+      contactType: "sales",
+      areaServed: "IN",
+      availableLanguage: ["en", "mr", "hi"],
+    },
+  };
+}
+
 export function createLocalBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteUrl}/#localbusiness`,
     name: siteName,
     description: siteDescription,
     url: siteUrl,
+    parentOrganization: { "@id": `${siteUrl}/#organization` },
     telephone: "+917218554183",
     email: "info@matamaulidoors.com",
     image: new URL(defaultImage.url, siteUrl).toString(),
@@ -94,16 +117,10 @@ export function createWebsiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
     name: siteName,
     url: siteUrl,
-    publisher: {
-      "@type": "Organization",
-      name: siteName,
-      logo: {
-        "@type": "ImageObject",
-        url: new URL(defaultImage.url, siteUrl).toString(),
-      },
-    },
+    publisher: { "@id": `${siteUrl}/#organization` },
   };
 }
 
@@ -137,6 +154,7 @@ export function createProductJsonLd(product: DoorProduct, category: DoorCategory
       "@type": "Brand",
       name: siteName,
     },
+    manufacturer: { "@id": `${siteUrl}/#organization` },
     category: category.name,
     material: product.material,
     model: product.modelNumber,

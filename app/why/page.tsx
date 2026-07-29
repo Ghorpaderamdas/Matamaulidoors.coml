@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from 'framer-motion';
 import { DoorOpen, Hammer, Shield, Truck, Wallet } from 'lucide-react';
@@ -25,6 +25,7 @@ export default function WhyPage() {
             eyebrow="Why Us"
             title="What makes Mata Mauli the trusted choice."
             subtitle="Every detail of our process is built around quality and longevity."
+            headingLevel="h1"
           />
           <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-2">
             {features.map((feature, index) => {
