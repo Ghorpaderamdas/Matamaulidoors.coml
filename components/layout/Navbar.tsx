@@ -95,7 +95,11 @@ function useActiveSection(pathname: string): NavSectionId {
   const sectionIds = useMemo(() => navItems.map((item) => item.sectionId), []);
 
   useEffect(() => {
-    setActiveSection(getRouteSection(pathname));
+    const frame = window.requestAnimationFrame(() => {
+      setActiveSection(getRouteSection(pathname));
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, [pathname]);
 
   useEffect(() => {

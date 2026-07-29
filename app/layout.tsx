@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Premium wooden, PVC, and designer doors handcrafted in Igatpuri, Nashik by Mata Mauli Industries.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
   },
   openGraph: {
     type: "website",
