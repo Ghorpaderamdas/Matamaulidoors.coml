@@ -216,22 +216,23 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="luxury-nav__links" aria-label="Primary sections">
+        <ul className="luxury-nav__links" aria-label="Primary sections">
           {navItems.map((item) => {
             const isActive = activeSection === item.sectionId;
 
             return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`luxury-nav__link ${isActive ? "luxury-nav__link--active" : ""}`}
-                aria-current={isActive ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`luxury-nav__link ${isActive ? "luxury-nav__link--active" : ""}`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              </li>
             );
           })}
-        </div>
+        </ul>
 
         <Link href="/#contact" className="luxury-nav__cta" aria-current={activeSection === "contact" ? "page" : undefined}>
           Get Free Quote
@@ -260,23 +261,24 @@ export function Navbar() {
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="luxury-nav__mobile-grid">
+            <ul className="luxury-nav__mobile-grid">
               {navItems.map((item) => {
                 const isActive = activeSection === item.sectionId;
 
                 return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`luxury-nav__mobile-link ${isActive ? "luxury-nav__mobile-link--active" : ""}`}
-                    onClick={closeMobileMenu}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    {item.label}
-                  </Link>
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={`luxury-nav__mobile-link ${isActive ? "luxury-nav__mobile-link--active" : ""}`}
+                      onClick={closeMobileMenu}
+                      aria-current={isActive ? "page" : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
             <Link
               href="/#contact"
               className="luxury-nav__mobile-cta"
@@ -291,6 +293,3 @@ export function Navbar() {
     </nav>
   );
 }
-
-
-

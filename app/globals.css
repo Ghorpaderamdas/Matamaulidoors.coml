@@ -167,6 +167,9 @@ button:hover {
   align-items: center;
   justify-content: center;
   gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .luxury-nav__link {
@@ -258,6 +261,9 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .luxury-nav__mobile-link {
@@ -408,6 +414,3 @@ button:hover {
   white-space: nowrap;
   border: 0;
 }
-
-
-
