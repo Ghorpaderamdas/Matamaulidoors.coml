@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import Image from 'next/image';
 import { Expand, X, ZoomIn } from 'lucide-react';
 import { memo, useEffect, useRef, useState } from 'react';
@@ -119,6 +121,3 @@ function ProductGalleryComponent({ images, alt }: Props) {
 }
 
 export const ProductGallery = memo(ProductGalleryComponent);
-
-
-
