@@ -30,6 +30,7 @@ const nextConfig: NextConfig = {
   compress: true,
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
+    staticGenerationMaxConcurrency: 1,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -65,8 +66,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
-
-
-
-
