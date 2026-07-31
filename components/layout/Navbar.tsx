@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -193,11 +193,10 @@ export function Navbar() {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <motion.nav
+    <nav
       ref={navRef}
       className={navClassName}
       aria-label="Primary navigation"
-      initial={false}
     >
       <div className="luxury-nav__inner">
         <Link href="/#home" className="luxury-nav__brand" onClick={closeMobileMenu}>
@@ -217,7 +216,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="luxury-nav__links" role="list">
+        <div className="luxury-nav__links" aria-label="Primary sections">
           {navItems.map((item) => {
             const isActive = activeSection === item.sectionId;
 
@@ -255,7 +254,7 @@ export function Navbar() {
           <motion.div
             id="mobile-navigation"
             className="luxury-nav__mobile-panel"
-            role="menu"
+            aria-label="Mobile navigation"
             initial={{ opacity: 0, y: -10, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
@@ -271,7 +270,6 @@ export function Navbar() {
                     href={item.href}
                     className={`luxury-nav__mobile-link ${isActive ? "luxury-nav__mobile-link--active" : ""}`}
                     onClick={closeMobileMenu}
-                    role="menuitem"
                     aria-current={isActive ? "page" : undefined}
                   >
                     {item.label}
@@ -283,7 +281,6 @@ export function Navbar() {
               href="/#contact"
               className="luxury-nav__mobile-cta"
               onClick={closeMobileMenu}
-              role="menuitem"
               aria-current={activeSection === "contact" ? "page" : undefined}
             >
               Get Free Quote
@@ -291,7 +288,9 @@ export function Navbar() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }
+
+
 

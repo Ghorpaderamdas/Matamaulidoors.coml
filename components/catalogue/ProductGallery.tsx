@@ -1,16 +1,19 @@
-﻿'use client';
+'use client';
 
 import Image from 'next/image';
 import { Expand, X, ZoomIn } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 
 type Props = { images: string[]; alt: string };
 
-export function ProductGallery({ images, alt }: Props) {
+function ProductGalleryComponent({ images, alt }: Props) {
   const [selected, setSelected] = useState(0);
   const [zoomed, setZoomed] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
   const image = images[selected];
+  const openButtonRef = useRef<HTMLButtonElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const wasFullscreenRef = useRef(false);
 
   useEffect(() => {
     if (!fullscreen) return;
@@ -23,6 +26,19 @@ export function ProductGallery({ images, alt }: Props) {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [fullscreen]);
+
+  useEffect(() => {
+    if (fullscreen) {
+      wasFullscreenRef.current = true;
+      closeButtonRef.current?.focus();
+      return;
+    }
+
+    if (wasFullscreenRef.current) {
+      wasFullscreenRef.current = false;
+      openButtonRef.current?.focus();
+    }
   }, [fullscreen]);
 
   return (
@@ -48,6 +64,7 @@ export function ProductGallery({ images, alt }: Props) {
               <ZoomIn size={18} aria-hidden="true" />
             </button>
             <button
+              ref={openButtonRef}
               type="button"
               onClick={() => setFullscreen(true)}
               aria-label="Open fullscreen image"
@@ -84,6 +101,7 @@ export function ProductGallery({ images, alt }: Props) {
           className="fixed inset-0 z-[100] grid place-items-center bg-[#111111]/95 p-5"
         >
           <button
+            ref={closeButtonRef}
             type="button"
             onClick={() => setFullscreen(false)}
             className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full bg-white text-[#1B1B1B] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#C89B3C]/30"
@@ -99,3 +117,8 @@ export function ProductGallery({ images, alt }: Props) {
     </>
   );
 }
+
+export const ProductGallery = memo(ProductGalleryComponent);
+
+
+

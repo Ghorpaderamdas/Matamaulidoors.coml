@@ -54,7 +54,7 @@ export function Footer() {
                 { label: 'Interior Doors', href: '/doors/interior' },
               ].map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="inline-flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
+                  <a href={item.href} className="flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
                     {item.label}
                   </a>
                 </li>
@@ -74,7 +74,7 @@ export function Footer() {
                 { label: 'Get Free Quote', href: '/#contact' },
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="inline-flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
+                  <a href={link.href} className="flex min-h-8 items-center transition-colors hover:text-[#d4a574]">
                     {link.label}
                   </a>
                 </li>
@@ -94,3 +94,4 @@ export function Footer() {
     </footer>
   );
 }
+

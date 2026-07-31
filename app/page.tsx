@@ -12,6 +12,9 @@ export const metadata = createPageMetadata(
 
 const faqJsonLd = createFaqJsonLd(faqs);
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export default function Page() {
   return (
     <>
@@ -21,3 +24,4 @@ export default function Page() {
     </>
   );
 }
+

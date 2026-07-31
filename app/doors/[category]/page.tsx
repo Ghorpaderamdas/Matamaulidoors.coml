@@ -13,6 +13,8 @@ import { createCategoryItemListJsonLd, createPageMetadata } from "@/lib/metadata
 type Props = { params: Promise<{ category: string }> };
 
 export const dynamicParams = false;
+export const dynamic = "force-static";
+export const revalidate = false;
 
 export function generateStaticParams() {
   return doorCategories.map((category) => ({ category: category.slug }));
@@ -58,7 +60,7 @@ export default async function CategoryPage({ params }: Props) {
       />
       <JsonLd data={createCategoryItemListJsonLd(category, products)} />
       <Navbar />
-      <main className="min-h-screen bg-[#FAF8F5] pt-0">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#FAF8F5] pt-0">
         <section className="relative overflow-hidden bg-[#111111] pb-14 pt-36 text-white md:pb-20 md:pt-48">
           <div className="absolute -right-32 top-0 h-80 w-80 rounded-full bg-[#C89B3C]/15 blur-3xl" />
           <div className="relative mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
@@ -85,3 +87,7 @@ export default async function CategoryPage({ params }: Props) {
     </>
   );
 }
+
+
+
+

@@ -38,8 +38,9 @@ const stats = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#FAF8F5] text-[#1B1B1B]">
+    <>
       <Navbar />
+      <main id="main-content" tabIndex={-1} className="min-h-screen overflow-x-hidden bg-[#FAF8F5] text-[#1B1B1B]">
 
       <section className="overflow-hidden pb-16 pt-32 md:pb-24 md:pt-40 xl:pb-32">
         <Container className="max-w-[1500px]">
@@ -197,7 +198,10 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
+
+

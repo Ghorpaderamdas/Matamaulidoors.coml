@@ -164,25 +164,45 @@ export function HeroSection() {
           background: rgba(255, 255, 255, 0.07);
           border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .indicator-active {
-          background: #C89B3C;
-          width: 36px;
-          box-shadow: 0 0 20px rgba(200, 155, 60, 0.4);
-        }
-        .indicator-inactive {
-          background: rgba(255, 255, 255, 0.4);
-          width: 10px;
-        }
         .indicator-active,
         .indicator-inactive {
-          height: 3px;
-          border-radius: 4px;
-          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          position: relative;
+          height: 24px;
+          width: 28px;
           cursor: pointer;
         }
-        .indicator-inactive:hover {
-          background: rgba(255, 255, 255, 0.7);
+        .indicator-active {
+          width: 44px;
+        }
+        .indicator-active:focus-visible,
+        .indicator-inactive:focus-visible {
+          outline: 3px solid #E7C77A;
+          outline-offset: 4px;
+          border-radius: 999px;
+        }
+        .indicator-active::after,
+        .indicator-inactive::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 3px;
+          border-radius: 4px;
+          transform: translate(-50%, -50%);
+          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .indicator-active::after {
+          width: 36px;
+          background: #C89B3C;
+          box-shadow: 0 0 20px rgba(200, 155, 60, 0.4);
+        }
+        .indicator-inactive::after {
+          width: 10px;
+          background: rgba(255, 255, 255, 0.4);
+        }
+        .indicator-inactive:hover::after {
           width: 18px;
+          background: rgba(255, 255, 255, 0.7);
         }
         .badge-glow {
           animation: pulseGlow 2s ease-in-out infinite;
@@ -239,7 +259,7 @@ export function HeroSection() {
           >
             <Image
               src={img.url}
-              alt={index === currentImageIndex ? img.alt : ""}
+              alt=""
               fill
               priority={index === 0}
               sizes="100vw"
@@ -260,30 +280,34 @@ export function HeroSection() {
         {/* Navigation Arrows */}
         <button
           onClick={goToPreviousImage}
+          type="button"
           className="slide-control absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/20 p-3 text-white backdrop-blur-sm transition-all duration-300 hover:bg-black/40 hover:scale-110"
           aria-label="Previous image"
         >
-          <ChevronDown className="rotate-90" size={24} />
+          <ChevronDown className="rotate-90" size={24} aria-hidden="true" />
         </button>
         <button
           onClick={goToNextImage}
+          type="button"
           className="slide-control absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/20 p-3 text-white backdrop-blur-sm transition-all duration-300 hover:bg-black/40 hover:scale-110"
           aria-label="Next image"
         >
-          <ChevronDown className="-rotate-90" size={24} />
+          <ChevronDown className="-rotate-90" size={24} aria-hidden="true" />
         </button>
       </div>
 
       {/* Image Indicators */}
-      <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 gap-2.5">
+      <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 gap-2.5" aria-label="Hero images">
         {backgroundImages.map((_, index) => (
           <button
             key={index}
+            type="button"
             onClick={() => setCurrentImageIndex(index)}
             className={`${
               index === currentImageIndex ? "indicator-active" : "indicator-inactive"
             }`}
             aria-label={`View image ${index + 1}`}
+            aria-pressed={index === currentImageIndex}
           />
         ))}
       </div>
@@ -291,6 +315,7 @@ export function HeroSection() {
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 z-10 h-1 bg-gradient-to-r from-[#C89B3C] to-[#E7C77A] transition-all duration-1000" 
         style={{ width: `${((currentImageIndex + 1) / backgroundImages.length) * 100}%` }}
+        aria-hidden="true"
       />
 
       {/* Decorative Elements - Reduced opacity */}
@@ -387,3 +412,7 @@ export function HeroSection() {
     </section>
   );
 }
+
+
+
+

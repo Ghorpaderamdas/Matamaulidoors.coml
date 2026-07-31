@@ -26,18 +26,20 @@ const FAQSection = dynamic(() =>
 
 export function LandingPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#FAF8F5] text-[#1B1B1B]">
+    <>
       <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <CollectionSection />
-      <WhySection />
-      <GallerySection />
-      <ReviewsSection />
-      <FAQSection />
-      <ContactSection />
+      <main id="main-content" tabIndex={-1} className="min-h-screen overflow-x-hidden bg-[#FAF8F5] text-[#1B1B1B]">
+        <HeroSection />
+        <AboutSection />
+        <CollectionSection />
+        <WhySection />
+        <GallerySection />
+        <ReviewsSection />
+        <FAQSection />
+        <ContactSection />
+      </main>
       <Footer />
       <FloatingContactButtons />
-    </main>
+    </>
   );
 }

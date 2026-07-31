@@ -1,5 +1,3 @@
-﻿"use client";
-
 import { ArrowRight, Mail, MapPin, PhoneCall } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -7,7 +5,7 @@ export function ContactSection() {
   const inputClass =
     "h-14 w-full rounded-xl border border-[#E5D8C4] bg-white px-5 text-base text-[#1B1B1B] outline-none transition-all placeholder:text-[#999] focus:border-[#C89B3C] focus:ring-4 focus:ring-[#C89B3C]/15";
   const labelClass =
-    "mb-2 block text-xs font-medium uppercase tracking-[0.22em] text-[#8F8167]";
+    "mb-2 block text-xs font-medium uppercase tracking-[0.22em] text-[#5F553F]";
 
   return (
     <section
@@ -16,7 +14,7 @@ export function ContactSection() {
     >
       <Container>
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-xs uppercase tracking-[0.28em] text-[#C89B3C]">
+          <p className="text-xs uppercase tracking-[0.28em] text-[#765A16]">
             Visit / Call / Write
           </p>
 
@@ -35,7 +33,7 @@ export function ContactSection() {
         <div className="mt-12 grid gap-8 lg:mt-16 lg:grid-cols-[410px_1fr]">
           <div className="space-y-6">
             <div className="rounded-[24px] border border-[#E5D8C4] bg-[#FDFBF8] p-6 shadow-[0_10px_40px_rgba(0,0,0,0.05)] md:p-8 lg:rounded-[30px]">
-              <p className="text-xs uppercase tracking-[0.28em] text-[#C89B3C]">
+              <p className="text-xs uppercase tracking-[0.28em] text-[#765A16]">
                 Founder
               </p>
 
@@ -48,17 +46,17 @@ export function ContactSection() {
               <div className="mt-8 space-y-7">
                 <div className="flex gap-4">
                   <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#FFF6E7]">
-                    <PhoneCall className="h-5 w-5 text-[#C89B3C]" aria-hidden="true" />
+                    <PhoneCall className="h-5 w-5 text-[#765A16]" aria-hidden="true" />
                   </div>
 
                   <div>
-                    <p className="text-xs uppercase tracking-[0.22em] text-[#988A72]">
+                    <p className="text-xs uppercase tracking-[0.22em] text-[#5F553F]">
                       Phone
                     </p>
 
                     <a
                       href="tel:+917218554183"
-                      className="mt-1 block text-base text-[#1B1B1B] transition hover:text-[#C89B3C] md:text-lg"
+                      className="mt-1 block text-base text-[#1B1B1B] transition hover:text-[#765A16] md:text-lg"
                     >
                       +91 72185 54183
                     </a>
@@ -67,17 +65,17 @@ export function ContactSection() {
 
                 <div className="flex gap-4">
                   <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#FFF6E7]">
-                    <Mail className="h-5 w-5 text-[#C89B3C]" aria-hidden="true" />
+                    <Mail className="h-5 w-5 text-[#765A16]" aria-hidden="true" />
                   </div>
 
                   <div className="min-w-0">
-                    <p className="text-xs uppercase tracking-[0.22em] text-[#988A72]">
+                    <p className="text-xs uppercase tracking-[0.22em] text-[#5F553F]">
                       Email
                     </p>
 
                     <a
                       href="mailto:info@matamaulidoors.com"
-                      className="mt-1 block break-words text-base text-[#1B1B1B] transition hover:text-[#C89B3C] md:text-lg"
+                      className="mt-1 block break-words text-base text-[#1B1B1B] transition hover:text-[#765A16] md:text-lg"
                     >
                       info@matamaulidoors.com
                     </a>
@@ -86,11 +84,11 @@ export function ContactSection() {
 
                 <div className="flex gap-4">
                   <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#FFF6E7]">
-                    <MapPin className="h-5 w-5 text-[#C89B3C]" aria-hidden="true" />
+                    <MapPin className="h-5 w-5 text-[#765A16]" aria-hidden="true" />
                   </div>
 
                   <div>
-                    <p className="text-xs uppercase tracking-[0.22em] text-[#988A72]">
+                    <p className="text-xs uppercase tracking-[0.22em] text-[#5F553F]">
                       Address
                     </p>
 
@@ -120,7 +118,7 @@ export function ContactSection() {
           </div>
 
           <div className="rounded-[24px] border border-[#E5D8C4] bg-[#FDFBF8] p-6 shadow-[0_10px_40px_rgba(0,0,0,0.05)] md:p-8 lg:rounded-[30px] lg:p-10">
-            <p className="text-xs uppercase tracking-[0.28em] text-[#C89B3C]">
+            <p className="text-xs uppercase tracking-[0.28em] text-[#765A16]">
               Get Free Quote
             </p>
 
@@ -220,7 +218,7 @@ export function ContactSection() {
                 <ArrowRight size={18} className="ml-2" aria-hidden="true" />
               </button>
 
-              <p className="text-center text-sm leading-6 text-[#888]">
+              <p className="text-center text-sm leading-6 text-[#5F5F5F]">
                 By submitting, you agree to be contacted regarding your enquiry.
               </p>
             </form>
@@ -230,3 +228,5 @@ export function ContactSection() {
     </section>
   );
 }
+
+

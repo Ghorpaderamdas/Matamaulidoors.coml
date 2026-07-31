@@ -183,7 +183,7 @@ export function ReviewsSection() {
                   &quot;
                 </div>
 
-                <div className="mb-4 flex gap-1" aria-label={`${review.rating} star review`}>
+                <div className="mb-4 flex gap-1" role="img" aria-label={`${review.rating} star review`}>
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <Star key={i} size={16} fill="#C89B3C" className="text-[#C89B3C]" aria-hidden="true" />
                   ))}
@@ -337,3 +337,4 @@ export function ReviewsSection() {
     </section>
   );
 }
+

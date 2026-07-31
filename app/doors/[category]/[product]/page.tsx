@@ -14,6 +14,8 @@ import { createPageMetadata, createProductJsonLd } from "@/lib/metadata";
 type Props = { params: Promise<{ category: string; product: string }> };
 
 export const dynamicParams = false;
+export const dynamic = "force-static";
+export const revalidate = false;
 
 export function generateStaticParams() {
   return doorProducts.map((product) => ({
@@ -68,7 +70,7 @@ export default async function ProductPage({ params }: Props) {
       />
       <JsonLd data={createProductJsonLd(product, category)} />
       <Navbar />
-      <main className="min-h-screen bg-[linear-gradient(#050505_0_8rem,#ffffff_8rem)] pt-28 text-[#1B1B1B] md:bg-[linear-gradient(#050505_0_9rem,#ffffff_9rem)] md:pt-36">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-[linear-gradient(#050505_0_8rem,#ffffff_8rem)] pt-28 text-[#1B1B1B] md:bg-[linear-gradient(#050505_0_9rem,#ffffff_9rem)] md:pt-36">
         <div className="mx-auto max-w-[1500px] px-4 pb-16 sm:px-6 md:pb-24 lg:px-8">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 py-7 font-sans text-xs text-[#6B7280]">
             <Link href="/" className="hover:text-[#C89B3C]">Home</Link>
@@ -154,3 +156,7 @@ function Spec({ label, value }: { label: string; value: string }) {
     </div>
   );
 }
+
+
+
+

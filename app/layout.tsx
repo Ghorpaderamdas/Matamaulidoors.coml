@@ -108,8 +108,9 @@ export default function RootLayout({
             createWebsiteJsonLd(),
           ]}
         />
-        <div id="main-content" tabIndex={-1}>{children}</div>
+        {children}
       </body>
     </html>
   );
 }
+

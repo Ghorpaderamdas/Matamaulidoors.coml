@@ -1,6 +1,8 @@
 export default function Loading() {
   return (
     <main
+      id="main-content"
+      tabIndex={-1}
       aria-busy="true"
       aria-label="Loading page"
       className="flex min-h-screen items-center justify-center bg-[#F9F7F3] text-[#C89B3C]"
@@ -13,3 +15,5 @@ export default function Loading() {
     </main>
   );
 }
+
+

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
@@ -41,15 +41,16 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#F4EBDC] text-[#1B1B1B]">
+    <>
       <Navbar />
-      <section className="pb-16 pt-32 md:pb-24 md:pt-40 xl:pb-32">
+      <main id="main-content" tabIndex={-1} className="min-h-screen overflow-x-hidden bg-[#F4EBDC] text-[#1B1B1B]">
+      <section className="pb-16 pt-32 md:pb-24 md:pt-40 xl:pb-32" aria-labelledby="contact-page-title">
         <Container>
           <div className="mb-12 text-center md:mb-14">
             <p className="text-xs uppercase tracking-[0.28em] text-[#C89B3C]">
               Visit / Call / Write
             </p>
-            <h1 className="mt-4 font-serif text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl">
+            <h1 id="contact-page-title" className="mt-4 font-serif text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl">
               Let&apos;s craft your door.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#1B1B1B]/70 md:text-lg">
@@ -100,7 +101,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6 overflow-hidden rounded-[24px] border border-[#E2D6BF] bg-white p-6 shadow-lg md:p-8">
+            <form onSubmit={handleSubmit} aria-describedby="contact-form-note contact-form-status" className="space-y-6 overflow-hidden rounded-[24px] border border-[#E2D6BF] bg-white p-6 shadow-lg md:p-8">
               <p className="text-xs uppercase tracking-[0.28em] text-[#C89B3C]">
                 Get Free Quote
               </p>
@@ -192,7 +193,7 @@ export default function ContactPage() {
               >
                 {loading ? 'Sending...' : 'Request Quote'}
               </button>
-              <p className="text-center text-sm leading-6 text-[#7a7a7a]">
+              <p id="contact-form-note" className="text-center text-sm leading-6 text-[#5F5F5F]">
                 By submitting, you agree to be contacted by our team regarding your enquiry.
               </p>
               {submitted ? (
@@ -204,7 +205,10 @@ export default function ContactPage() {
           </div>
         </Container>
       </section>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
+
+

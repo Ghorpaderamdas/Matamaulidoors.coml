@@ -20,8 +20,9 @@ const gallery = [
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#FAF8F5] text-[#1B1B1B]">
+    <>
       <Navbar />
+      <main id="main-content" tabIndex={-1} className="min-h-screen overflow-x-hidden bg-[#FAF8F5] text-[#1B1B1B]">
       <section className="pb-16 pt-32 md:pb-24 md:pt-40 xl:pb-32">
         <Container>
           <SectionTitle
@@ -53,7 +54,10 @@ export default function GalleryPage() {
           </div>
         </Container>
       </section>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
+
+
