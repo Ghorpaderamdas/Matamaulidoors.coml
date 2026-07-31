@@ -44,41 +44,49 @@ const features = [
 const backgroundImages = [
   {
     id: 1,
-    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550574/about-profile_iiiclx.jpg",
+    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/f_auto,q_auto/v1784550574/about-profile_iiiclx.jpg",
     alt: "Luxury wooden door with intricate carvings"
   },
   {
     id: 2,
-    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550655/gallery-07_b8kqq9.jpg",
+    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/f_auto,q_auto/v1784550655/gallery-07_b8kqq9.jpg",
     alt: "Modern PVC door with glass panels"
   },
   {
     id: 3,
-    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550651/gallery-05_oadd5o.jpg",
+    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/f_auto,q_auto/v1784550651/gallery-05_oadd5o.jpg",
     alt: "Designer door with gold hardware"
   },
   {
     id: 4,
-    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550651/gallery-05_oadd5o.jpg",
+    url: "https://res.cloudinary.com/pnvdzj9w/image/upload/f_auto,q_auto/v1784550651/gallery-05_oadd5o.jpg",
     alt: "Classic wooden door with vintage finish"
   }
 ];
 
 export function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loadedImageIndexes, setLoadedImageIndexes] = useState(() => new Set([0]));
   const [isPaused, setIsPaused] = useState(false);
 
-  const goToNextImage = useCallback(() => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
-    );
+  const showImage = useCallback((index: number) => {
+    setLoadedImageIndexes((indexes) => {
+      if (indexes.has(index)) return indexes;
+
+      const nextIndexes = new Set(indexes);
+      nextIndexes.add(index);
+      return nextIndexes;
+    });
+    setCurrentImageIndex(index);
   }, []);
 
+  const goToNextImage = useCallback(() => {
+    showImage((currentImageIndex + 1) % backgroundImages.length);
+  }, [currentImageIndex, showImage]);
+
   const goToPreviousImage = useCallback(() => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? backgroundImages.length - 1 : prevIndex - 1
-    );
-  }, []);
+    showImage((currentImageIndex - 1 + backgroundImages.length) % backgroundImages.length);
+  }, [currentImageIndex, showImage]);
 
   useEffect(() => {
     if (!isPaused) {
@@ -257,18 +265,20 @@ export function HeroSection() {
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <Image
-              src={img.url}
-              alt=""
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className="object-cover"
-              style={{
-                animation: index === currentImageIndex ? "zoomIn 10s ease-out" : "none",
-                transform: index === currentImageIndex ? "scale(1)" : "scale(1.15)",
-              }}
-            />
+            {loadedImageIndexes.has(index) ? (
+              <Image
+                src={img.url}
+                alt=""
+                fill
+                priority={index === 0}
+                sizes="100vw"
+                className="object-cover"
+                style={{
+                  animation: index === currentImageIndex ? "zoomIn 10s ease-out" : "none",
+                  transform: index === currentImageIndex ? "scale(1)" : "scale(1.15)",
+                }}
+              />
+            ) : null}
           </div>
         ))}
         
@@ -302,7 +312,7 @@ export function HeroSection() {
           <button
             key={index}
             type="button"
-            onClick={() => setCurrentImageIndex(index)}
+            onClick={() => showImage(index)}
             className={`${
               index === currentImageIndex ? "indicator-active" : "indicator-inactive"
             }`}
@@ -412,7 +422,3 @@ export function HeroSection() {
     </section>
   );
 }
-
-
-
-

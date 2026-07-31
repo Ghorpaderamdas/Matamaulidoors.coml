@@ -75,10 +75,9 @@ export function AboutSection() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-gradient-to-br from-[#FAF7F2] via-[#F3ECE0] to-[#E9DAC1]">
 
                 <Image
-                  src="https://res.cloudinary.com/pnvdzj9w/image/upload/v1785164298/ProfileBU0_jr73l6.png"
+                  src="https://res.cloudinary.com/pnvdzj9w/image/upload/f_auto,q_auto/v1785164298/ProfileBU0_jr73l6.png"
                   alt="Premium handcrafted wooden door by Mata Mauli Industries"
                   fill
-                  priority
                   sizes="(max-width:768px)100vw,(max-width:1200px)60vw,680px"
                   className="object-contain p-4"
                 />
@@ -223,8 +222,3 @@ export function AboutSection() {
     </section>
   );
 }
-
-
-
-
-

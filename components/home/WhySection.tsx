@@ -63,7 +63,7 @@ export function WhySection() {
       id="why"
       className="relative overflow-hidden bg-[#1B1B1B] py-16 md:py-24 xl:py-32"
       style={{
-        backgroundImage: 'url(https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550649/hero-door_oyye0s.svg)',
+        backgroundImage: 'url(https://res.cloudinary.com/pnvdzj9w/image/upload/f_auto,q_auto/v1784550649/hero-door_oyye0s.svg)',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
@@ -99,7 +99,7 @@ export function WhySection() {
           className="mx-auto mb-12 w-full max-w-[1280px] md:mb-16"
         >
           <Image
-            src="https://res.cloudinary.com/pnvdzj9w/image/upload/v1784550657/whyus_uomee9.png"
+            src="https://res.cloudinary.com/pnvdzj9w/image/upload/f_auto,q_auto/v1784550657/whyus_uomee9.png"
             alt="Door construction details showing the science inside and simple outside finish"
             width={1800}
             height={841}
